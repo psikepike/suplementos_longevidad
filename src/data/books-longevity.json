@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Outlive: The Science and Art of Longevity",
+    "author": "Peter Attia MD",
+    "asin": "B0B1G82TBB",
+    "cover": "https://m.media-amazon.com/images/I/41KsgDqj7hL.jpg",
+    "description": "Una mirada profunda y clínica sobre cómo prevenir enfermedades crónicas y estirar no solo nuestra esperanza de vida absoluta, sino evitar el deterioro en nuestra última década.",
+    "amazonUrlEs": "https://www.amazon.es/dp/B0B1G82TBB",
+    "badge": "Nº 1 en Ventas",
+    "ctaHint": "Ver la edición traducida",
+    "language": "es",
+    "tags": ["longevidad", "salud metabolica", "ejercicio", "recomendados"],
+    "year": 2023,
+    "rating": 4.8,
+    "reviewCount": 14500,
+    "ratingUpdatedAt": "2026-03-01"
+  },
+  {
+    "title": "Why We Sleep: The New Science of Sleep and Dreams",
+    "author": "Matthew Walker",
+    "asin": "B06Y6GGQRV",
+    "cover": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=400&auto=format&fit=crop",
+    "description": "Un ensayo fundamental para entender cómo el ritmo circadiano es la piedra angular del envejecimiento saludable.",
+    "amazonUrlEs": "https://www.amazon.es/dp/B06Y6GGQRV",
+    "badge": "Lectura Obligada",
+    "ctaHint": "Consultar edición Kindle",
+    "language": "es",
+    "tags": ["sueño", "memoria", "recomendados", "top ventas"],
+    "year": 2017,
+    "rating": 4.7,
+    "reviewCount": 21000,
+    "ratingUpdatedAt": "2026-03-01"
+  },
+  {
+    "title": "Lifespan: Why We Age—and Why We Don't Have To",
+    "author": "David A. Sinclair",
+    "asin": "B07P8CR5DT",
+    "cover": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=400&fit=crop",
+    "description": "Perspectivas muy avanzadas (y ocasionalmente teóricas) sobre los activadores genéticos sirtuinos y compuestos limitantes.",
+    "amazonUrlEs": "https://www.amazon.es/dp/B07P8CR5DT",
+    "badge": "",
+    "ctaHint": "Edición de tapa dura",
+    "language": "es",
+    "tags": ["longevidad", "nutricion", "ingles"],
+    "year": 2019,
+    "rating": 4.6,
+    "reviewCount": 10200,
+    "ratingUpdatedAt": "2026-03-01"
+  }
+]

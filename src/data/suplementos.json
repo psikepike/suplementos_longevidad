@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "magnesio",
+    "name": "Magnesio",
+    "categorySlug": "sueno",
+    "shortDescription": "Mineral involucrado en cientos de reacciones bioquímicas. Suele utilizarse para apoyar el descanso y la relajación neuromuscular.",
+    "evidenceLevel": "Alta",
+    "whatIsIt": "El magnesio es un macromineral esencial. Aproximadamente el 60% del magnesio del cuerpo se encuentra en los huesos, mientras que el resto está en músculos, tejidos blandos y fluidos.",
+    "whatIsItUsedFor": "Se emplea habitualmente para apoyar la relajación muscular, contribuir a un descanso reparador y mantener la función normal del sistema nervioso.",
+    "evidence": "Amplia evidencia respalda su uso en personas con déficits. Estudios clínicos sugieren mejoras subjetivas en la calidad del sueño y en el manejo del estrés cotidiano.",
+    "standardDose": "200-400 mg diarios, dependiendo de la tolerancia y el formato. Es preferible tomarlo junto con alimentos.",
+    "sideEffects": "Dosis altas pueden ocasionar un leve efecto laxante o malestar gástrico transitorio, especialmente si se usa formato óxido o citrato.",
+    "whoShouldAvoid": "Personas con insuficiencia renal o que tomen cierto tipo de diuréticos deben consultar siempre a un profesional sanitario antes de comenzar su uso.",
+    "bestFormats": "Bisglicinato (alta tolerancia, ideal para el descanso nocturno), Treonato (potencial para apoyo cognitivo), Citrato (buena absorción, puede ser relajante intestinal).",
+    "products": [
+      {
+        "name": "Magnesio Bisglicinato Alta Absorción",
+        "type": "Cápsulas",
+        "dose": "200mg",
+        "capsules": 120,
+        "estimatedPrice": "19.90€",
+        "amazonUrl": "https://amazon.es/ejemplo-magnesio"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿En qué momento del día conviene tomar el magnesio?",
+        "answer": "Puesto que puede tener un delicado efecto relajante a nivel muscular, a menudo se sugiere tomarlo 1 o 2 horas antes de irse a dormir."
+      }
+    ]
+  },
+  {
+    "slug": "omega-3",
+    "name": "Omega 3 (EPA/DHA)",
+    "categorySlug": "corazon-y-circulacion",
+    "shortDescription": "Ácidos grasos recomendados para el mantenimiento de un correcto flujo cardiovascular, regulación lipídica y salud cerebral.",
+    "evidenceLevel": "Alta",
+    "whatIsIt": "Las grasas poliinsaturadas esenciales (EPA y DHA) son lípidos que el cuerpo no puede producir en cantidades suficientes por sí mismo, obligando a ingerirlos mediante dieta o suplementación.",
+    "whatIsItUsedFor": "Se utilizan frecuentemente como apoyo general de carácter antiinflamatorio y para proteger el sistema endotelial, la salud macular y la función cognitiva normal.",
+    "evidence": "Extensa literatura médica y sociedades cardiológicas corroboran el papel del EPA y el DHA en la salud del corazón y en la regulación equilibrada de triglicéridos.",
+    "standardDose": "1000-2000 mg de EPA+DHA combinado al día. Tomar con comidas que contengan otras grasas para maximizar la absorción.",
+    "sideEffects": "Ocasionalmente puede provocar un ligero sabor a pescado (reflujo). En dosis extremadamente altas puede alterar la capacidad de coagulación normal.",
+    "whoShouldAvoid": "Quienes toman medicación anticoagulante (como Sintrom u otros) deben tener especial precaución e informar a su equipo médico.",
+    "bestFormats": "Aceite de pescado molecularmente destilado en forma de triglicéridos o aceite de krill. Para personas veganas la mejor alternativa es el aceite extraído de microalgas.",
+    "products": [
+      {
+        "name": "Omega 3 Alta Concentración Neutro",
+        "type": "Perlas",
+        "dose": "1000mg",
+        "capsules": 60,
+        "estimatedPrice": "24.90€",
+        "amazonUrl": "https://amazon.es/ejemplo-omega3"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Cómo puedo evitar el reflujo con sabor a pescado?",
+        "answer": "Se suele aconsejar guardar el frasco en el frigorífico o tomar la perla justo al inicio de una comida contundente."
+      }
+    ]
+  },
+  {
+    "slug": "creatina-mayores",
+    "name": "Creatina (Monohidrato)",
+    "categorySlug": "energia-y-fatiga",
+    "shortDescription": "Compuesto ampliamente estudiado para apoyar la masa muscular, prevenir la sarcopenia y combatir la fatiga en adultos mayores.",
+    "evidenceLevel": "Alta",
+    "whatIsIt": "La creatina es una molécula que se produce en el cuerpo a partir de aminoácidos y juega un papel crucial en la producción rápida de energía celular.",
+    "whatIsItUsedFor": "Clásicamente usada en deporte, en mayores de 50 años se suele emplear para mitigar la pérdida de masa muscular (sarcopenia) y dar un soporte a la movilidad.",
+    "evidence": "Decenas de estudios destacan su seguridad y eficacia combinada con ejercicio de fuerza en adultos mayores, mejorando su tono muscular y autonomía.",
+    "standardDose": "De 3 a 5 gramos al día de forma continuada, disuelta en agua u otra bebida.",
+    "sideEffects": "Frecuentemente causa una ligera retención de agua intracelular (beneficioso a nivel muscular). Al inicio puede dar ligeras molestias gástricas si se toma sin líquido suficiente.",
+    "whoShouldAvoid": "Personas diagnosticadas con patologías orgánicas del riñón deben evitar suplementos de alta carga de creatina sin supervisión nefróloga.",
+    "bestFormats": "Monohidrato de Creatina pura (con sello Creapure a ser posible).",
+    "products": [
+      {
+        "name": "Creatina Monohidrato Ultrapura",
+        "type": "Polvo sabor neutro",
+        "dose": "300g (100 tomas)",
+        "capsules": 100,
+        "estimatedPrice": "22.90€",
+        "amazonUrl": "https://amazon.es/ejemplo-creatina"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Debo hacer una fase de carga tomando mucho durante una semana?",
+        "answer": "No es necesario, especialmente en adultos mayores. Una toma sostenida de 3-5g diarios logrará los mismos beneficios a lo largo del mes de forma más segura."
+      }
+    ]
+  },
+  {
+    "slug": "q10",
+    "name": "Coenzima Q10",
+    "categorySlug": "corazon-y-circulacion",
+    "shortDescription": "Antioxidante clave a nivel celular. Particularmente investigado en personas que consumen estatinas para el colesterol.",
+    "evidenceLevel": "Media",
+    "whatIsIt": "Una sustancia semejante a las vitaminas que el cuerpo produce y utiliza para generar energía y proteger células del estrés oxidativo.",
+    "whatIsItUsedFor": "Suele buscarse para compensar la caída natural de los niveles de Q10 con la edad o la producida por algunos medicamentos (las estatinas).",
+    "evidence": "La evidencia muestra de alta utilidad el empleo preventivo para aminorar el desgaste muscular provocado por los reguladores del colesterol; así como mejoras de los marcadores cardíacos.",
+    "standardDose": "100 a 200 mg diarios, preferiblemente junto con una comida que contenga algo de grasa.",
+    "sideEffects": "Gastrointestinal leve y transitorio en un porcentaje de personas muy bajo.",
+    "whoShouldAvoid": "Los pacientes en regímenes quimioterapéuticos y quienes usan medicamentos anticoagulantes deben consultar primero con su médico la viabilidad.",
+    "bestFormats": "Se suele comercializar como Ubiquinona o Ubiquinol. El Ubiquinol se promociona como más biodisponible para personas mayores.",
+    "products": [
+      {
+        "name": "Coenzima Q10 (Ubiquinona) Alta absorción",
+        "type": "Cápsulas blandas",
+        "dose": "200mg",
+        "capsules": 90,
+        "estimatedPrice": "28.50€",
+        "amazonUrl": "https://amazon.es/ejemplo-q10"
+      }
+    ],
+    "faq": [
+      {
+        "question": "¿Es obligatorio elegir Ubiquinol?",
+        "answer": "Aunque el Ubiquinol se considera la forma activa, la Ubiquinona tradicional ha sido la más estudiada en ensayos clínicos a largo plazo. Ambas son válidas."
+      }
+    ]
+  }
+]

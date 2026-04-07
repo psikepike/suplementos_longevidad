@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "energia-y-fatiga",
+    "name": "Energía y fatiga",
+    "description": "Suplementos utilizados frecuentemente para apoyar los niveles de energía celular y reducir la sensación de cansancio de forma saludable."
+  },
+  {
+    "slug": "memoria-y-cerebro",
+    "name": "Memoria y cerebro",
+    "description": "Opciones con evidencia orientadas a apoyar el bienestar cognitivo, el foco y la salud neuronal a partir de los 50 años."
+  },
+  {
+    "slug": "articulaciones",
+    "name": "Articulaciones",
+    "description": "Compuestos muy utilizados para favorecer la movilidad, el mantenimiento cartílago y el confort articular general."
+  },
+  {
+    "slug": "sueno",
+    "name": "Sueño",
+    "description": "Suplementación diseñada para favorecer una correcta higiene del sueño reparador y ciclos circadianos saludables."
+  },
+  {
+    "slug": "corazon-y-circulacion",
+    "name": "Corazón y circulación",
+    "description": "Nutrientes y antioxidantes relacionados en estudios con un sistema cardiovascular y endotelial sano."
+  },
+  {
+    "slug": "longevidad",
+    "name": "Longevidad",
+    "description": "Compuestos seleccionados por la investigación actual sobre mecanismos de envejecimiento celular y salud metabólica a largo plazo."
+  }
+]
