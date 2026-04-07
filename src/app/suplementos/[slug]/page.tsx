@@ -6,6 +6,7 @@ import SupplementAffiliateCard from '@/components/SupplementAffiliateCard';
 import FaqAccordion from '@/components/FaqAccordion';
 import TrackedLink from '@/components/TrackedLink';
 import Link from 'next/link';
+import { getAmazonAffiliateUrl } from '@/utils/amazon';
 
 export async function generateStaticParams() {
   return suplementos.map((s) => ({ slug: s.slug }));
@@ -14,7 +15,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const { slug } = await params;
   const suplemento = suplementos.find((s) => s.slug === slug);
-  if (!suplemento) return { title: 'No encontrado' };
+  if (!suplemento) return notFound();
   
   return {
     title: `Guía sobre ${suplemento.name} | Evidencia y Dosis prudentes`,
@@ -35,7 +36,7 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
   const suplemento = suplementos.find((s) => s.slug === slug);
 
   if (!suplemento) {
-    return <div className="max-w-4xl mx-auto py-24 text-center">Suplemento no encontrado</div>;
+    notFound();
   }
 
   const jsonLd = {
@@ -136,23 +137,28 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#E5E2DA] bg-white">
-                {suplemento.products.map((prod, idx) => (
-                  <tr key={idx} className="hover:bg-[#F7F6F2]/50 transition-colors">
-                    <td className="py-5 px-4 font-medium text-[#2B2B2B]">{prod.name}</td>
-                    <td className="py-5 px-4 text-[#666666]">{prod.type} / {prod.capsules} ud</td>
-                    <td className="py-5 px-4 text-[#666666]">{prod.dose}</td>
-                    <td className="py-5 px-4 text-right">
-                      <TrackedLink
-                        href={prod.amazonUrl} 
-                        eventName="amazon_click"
-                        eventData={{ type: 'suplemento_tabla', url: prod.amazonUrl, slug }}
-                        className="inline-block bg-white text-[#1F3A5F] border border-[#E5E2DA] px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#6B8F71] hover:text-white hover:border-[#6B8F71] transition-all"
-                      >
-                        Ver en Amazon
-                      </TrackedLink>
-                    </td>
-                  </tr>
-                ))}
+                {(suplemento.recommendedAsins || []).map((asin: string, idx: number) => {
+                  const prod = amazonSupplementsData.find(a => a.asin === asin);
+                  if (!prod) return null;
+                  
+                  return (
+                    <tr key={idx} className="hover:bg-[#F7F6F2]/50 transition-colors">
+                      <td className="py-5 px-4 font-medium text-[#2B2B2B]">{prod.name}</td>
+                      <td className="py-5 px-4 text-[#666666]">{prod.format} {prod.capsules > 0 && `/ ${prod.capsules} ud`}</td>
+                      <td className="py-5 px-4 text-[#666666]">{prod.dose}</td>
+                      <td className="py-5 px-4 text-right">
+                        <TrackedLink
+                          href={getAmazonAffiliateUrl(prod.asin)} 
+                          eventName="amazon_click"
+                          eventData={{ type: 'suplemento_tabla', asin: prod.asin, slug }}
+                          className="inline-block bg-white text-[#1F3A5F] border border-[#E5E2DA] px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#6B8F71] hover:text-white hover:border-[#6B8F71] transition-all"
+                        >
+                          Ver en Amazon
+                        </TrackedLink>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>

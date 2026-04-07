@@ -1,5 +1,6 @@
 import TrackedLink from './TrackedLink';
-
+import Image from 'next/image';
+import { getAmazonAffiliateUrl } from '@/utils/amazon';
 export interface AmazonSupplement {
   slug: string;
   asin: string;
@@ -32,8 +33,12 @@ export default function SupplementAffiliateCard({ supplement }: { supplement: Am
         <div className="absolute top-4 right-4 bg-white/90 backdrop-blur text-[#1F3A5F] text-xs font-bold px-2 py-1 rounded border border-[#E5E2DA] z-10">
           Evidencia: {supplement.evidenceLevel}
         </div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={supplement.image} alt={supplement.name} className="w-full h-full object-cover absolute inset-0 opacity-80 mix-blend-multiply" />
+        <Image 
+          src={supplement.image} 
+          alt={supplement.name} 
+          fill
+          className="object-cover absolute inset-0 opacity-80 mix-blend-multiply" 
+        />
       </div>
       
       <div className="p-6 flex flex-col flex-grow">
@@ -63,7 +68,7 @@ export default function SupplementAffiliateCard({ supplement }: { supplement: Am
         <div className="flex items-center justify-between border-t border-[#E5E2DA] pt-4 mt-auto">
           <span className="text-lg font-bold text-[#1F3A5F]">{supplement.price}</span>
           <TrackedLink
-            href={supplement.amazonUrl}
+            href={getAmazonAffiliateUrl(supplement.asin)}
             eventName="amazon_click"
             eventData={{ type: 'suplemento_card', asin: supplement.asin }}
             className="inline-flex items-center justify-center bg-white text-[#1F3A5F] font-medium border border-[#E5E2DA] px-4 py-2 rounded-lg hover:bg-[#6B8F71] hover:text-white hover:border-[#6B8F71] transition-all text-sm"

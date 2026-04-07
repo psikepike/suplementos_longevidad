@@ -12,16 +12,7 @@
     "sideEffects": "Dosis altas pueden ocasionar un leve efecto laxante o malestar gástrico transitorio, especialmente si se usa formato óxido o citrato.",
     "whoShouldAvoid": "Personas con insuficiencia renal o que tomen cierto tipo de diuréticos deben consultar siempre a un profesional sanitario antes de comenzar su uso.",
     "bestFormats": "Bisglicinato (alta tolerancia, ideal para el descanso nocturno), Treonato (potencial para apoyo cognitivo), Citrato (buena absorción, puede ser relajante intestinal).",
-    "products": [
-      {
-        "name": "Magnesio Bisglicinato Alta Absorción",
-        "type": "Cápsulas",
-        "dose": "200mg",
-        "capsules": 120,
-        "estimatedPrice": "19.90€",
-        "amazonUrl": "https://amazon.es/ejemplo-magnesio"
-      }
-    ],
+    "recommendedAsins": ["B00EJW0"],
     "faq": [
       {
         "question": "¿En qué momento del día conviene tomar el magnesio?",
@@ -42,16 +33,7 @@
     "sideEffects": "Ocasionalmente puede provocar un ligero sabor a pescado (reflujo). En dosis extremadamente altas puede alterar la capacidad de coagulación normal.",
     "whoShouldAvoid": "Quienes toman medicación anticoagulante (como Sintrom u otros) deben tener especial precaución e informar a su equipo médico.",
     "bestFormats": "Aceite de pescado molecularmente destilado en forma de triglicéridos o aceite de krill. Para personas veganas la mejor alternativa es el aceite extraído de microalgas.",
-    "products": [
-      {
-        "name": "Omega 3 Alta Concentración Neutro",
-        "type": "Perlas",
-        "dose": "1000mg",
-        "capsules": 60,
-        "estimatedPrice": "24.90€",
-        "amazonUrl": "https://amazon.es/ejemplo-omega3"
-      }
-    ],
+    "recommendedAsins": ["B09MN4L"],
     "faq": [
       {
         "question": "¿Cómo puedo evitar el reflujo con sabor a pescado?",
@@ -72,16 +54,7 @@
     "sideEffects": "Frecuentemente causa una ligera retención de agua intracelular (beneficioso a nivel muscular). Al inicio puede dar ligeras molestias gástricas si se toma sin líquido suficiente.",
     "whoShouldAvoid": "Personas diagnosticadas con patologías orgánicas del riñón deben evitar suplementos de alta carga de creatina sin supervisión nefróloga.",
     "bestFormats": "Monohidrato de Creatina pura (con sello Creapure a ser posible).",
-    "products": [
-      {
-        "name": "Creatina Monohidrato Ultrapura",
-        "type": "Polvo sabor neutro",
-        "dose": "300g (100 tomas)",
-        "capsules": 100,
-        "estimatedPrice": "22.90€",
-        "amazonUrl": "https://amazon.es/ejemplo-creatina"
-      }
-    ],
+    "recommendedAsins": ["B08KLQ9"],
     "faq": [
       {
         "question": "¿Debo hacer una fase de carga tomando mucho durante una semana?",
@@ -102,16 +75,7 @@
     "sideEffects": "Gastrointestinal leve y transitorio en un porcentaje de personas muy bajo.",
     "whoShouldAvoid": "Los pacientes en regímenes quimioterapéuticos y quienes usan medicamentos anticoagulantes deben consultar primero con su médico la viabilidad.",
     "bestFormats": "Se suele comercializar como Ubiquinona o Ubiquinol. El Ubiquinol se promociona como más biodisponible para personas mayores.",
-    "products": [
-      {
-        "name": "Coenzima Q10 (Ubiquinona) Alta absorción",
-        "type": "Cápsulas blandas",
-        "dose": "200mg",
-        "capsules": 90,
-        "estimatedPrice": "28.50€",
-        "amazonUrl": "https://amazon.es/ejemplo-q10"
-      }
-    ],
+    "recommendedAsins": [],
     "faq": [
       {
         "question": "¿Es obligatorio elegir Ubiquinol?",
