@@ -3,6 +3,11 @@ import Link from 'next/link';
 import categorias from '@/data/categorias.json';
 import suplementos from '@/data/suplementos.json';
 import NewsletterForm from '@/components/NewsletterForm';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' }
+};
 
 export default function Home() {
   return (
@@ -93,7 +98,7 @@ export default function Home() {
               <h2 className="text-sm font-bold text-[#4ade80] tracking-widest uppercase mb-2">Visión global</h2>
               <h3 className="font-serif text-3xl md:text-4xl font-bold text-white max-w-2xl leading-tight">Mapeo Rápido de Suplementos</h3>
             </div>
-            <Link href="/suplementos-recomendados" className="text-white hover:text-[#4ade80] border-b border-white/50 hover:border-[#4ade80] pb-1 transition-all md:mb-2 text-sm font-bold uppercase tracking-wider">
+            <Link href="/suplementos" className="text-white hover:text-[#4ade80] border-b border-white/50 hover:border-[#4ade80] pb-1 transition-all md:mb-2 text-sm font-bold uppercase tracking-wider">
               Ver catálogo completo
             </Link>
           </div>

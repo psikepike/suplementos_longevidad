@@ -18,9 +18,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!suplemento) return notFound();
   
   return {
-    title: `Guía sobre ${suplemento.name} | Evidencia y Dosis prudentes`,
+    title: `Guía sobre ${suplemento.name}: Evidencia y Dosis`,
     description: suplemento.shortDescription,
-    alternates: { canonical: `/suplementos/${slug}` },
+    alternates: { canonical: `https://suplementoslongevidad.com/suplementos/${slug}` },
     openGraph: {
       type: "article",
       url: `https://suplementoslongevidad.com/suplementos/${slug}`,
@@ -191,7 +191,7 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
             )}
             
             <div className="mt-8 text-center border-b border-[#E5E2DA] pb-12">
-              <a href="/suplementos-recomendados" className="inline-flex items-center justify-center bg-white text-[#1F3A5F] border border-[#1F3A5F] font-bold px-8 py-3 rounded-xl hover:bg-[#1F3A5F] hover:text-white transition-all">
+              <a href="/suplementos" className="inline-flex items-center justify-center bg-white text-[#1F3A5F] border border-[#1F3A5F] font-bold px-8 py-3 rounded-xl hover:bg-[#1F3A5F] hover:text-white transition-all">
                 Ver todos los suplementos aprobados
               </a>
             </div>

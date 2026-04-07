@@ -5,7 +5,10 @@ import TrackScroll from '@/components/TrackScroll';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://suplementoslongevidad.com'),
-  title: "Suplementos Longevidad | Guías prudentes para mayores de 50 años",
+  title: {
+    default: "Suplementos Longevidad | Guías prudentes para mayores de 50 años",
+    template: "%s | Suplementos Longevidad"
+  },
   description: "Información divulgativa y basada en evidencia sobre los suplementos más comunes para favorecer un envejecimiento saludable.",
   openGraph: {
     type: "website",

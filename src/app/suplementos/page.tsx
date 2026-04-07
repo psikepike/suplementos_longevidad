@@ -6,7 +6,7 @@ import AffiliateDisclosure from '@/components/AffiliateDisclosure';
 export const metadata: Metadata = {
   title: 'Catálogo de Suplementos Recomendados | Longevidad',
   description: 'Selección de suplementos por evidencia, dosis prudente y fiabilidad. Orientación para envejecimiento de calidad sin medical claims.',
-  alternates: { canonical: '/suplementos-recomendados' }
+  alternates: { canonical: 'https://suplementoslongevidad.com/suplementos' }
 };
 
 export default function SuplementosAfiliadosPage() {
