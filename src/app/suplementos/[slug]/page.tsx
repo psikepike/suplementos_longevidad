@@ -6,6 +6,7 @@ import SupplementAffiliateCard from '@/components/SupplementAffiliateCard';
 import FaqAccordion from '@/components/FaqAccordion';
 import TrackedLink from '@/components/TrackedLink';
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAmazonAffiliateUrl } from '@/utils/amazon';
 
 export async function generateStaticParams() {
@@ -78,7 +79,13 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
 
       <header className="mb-14">
         <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#1F3A5F] tracking-tight mb-4">{suplemento.name}</h1>
-        <p className="text-xl md:text-2xl text-[#6B8F71] font-serif italic max-w-2xl">{suplemento.shortDescription}</p>
+        <p className="text-xl md:text-2xl text-[#6B8F71] font-serif italic max-w-2xl mb-8">{suplemento.shortDescription}</p>
+        
+        {slug === 'magnesio' && (
+          <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-sm border border-[#E5E2DA]">
+            <Image src="/images/supplements/magnesio/hero.jpeg" alt={`Hero banner de ${suplemento.name}`} fill className="object-cover" priority />
+          </div>
+        )}
       </header>
 
       <div className="grid gap-12 lg:gap-16">
@@ -89,8 +96,40 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
 
         <section>
           <h2 className="text-2xl font-serif font-semibold text-[#1F3A5F] mb-4">Para qué suele utilizarse</h2>
-          <p className="text-[#2B2B2B]">{suplemento.whatIsItUsedFor}</p>
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            <p className="text-[#2B2B2B] flex-1">{suplemento.whatIsItUsedFor}</p>
+            {slug === 'magnesio' && (
+              <div className="relative w-full md:w-1/3 h-48 md:h-56 rounded-xl overflow-hidden shadow-sm border border-[#E5E2DA] shrink-0">
+                <Image src="/images/supplements/magnesio/contexto.jpeg" alt="Uso contextual" fill className="object-cover" />
+              </div>
+            )}
+          </div>
         </section>
+
+        {slug === 'magnesio' && (
+          <section className="bg-[#182C49] text-white p-6 md:p-8 rounded-2xl shadow-xl mt-6 border border-[#264166]">
+            <h2 className="text-xl md:text-2xl font-serif font-bold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-[#4ade80]/20 flex items-center justify-center text-[#4ade80] text-sm">✓</span>
+              ¿Qué formato elegir?
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+              <div className="bg-[#162944] p-5 rounded-xl border border-white/10 hover:bg-white/5 transition-colors">
+                <h3 className="font-bold text-[#4ade80] mb-2 uppercase text-[11px] tracking-wider">Bisglicinato</h3>
+                <p className="text-white/80 text-sm mb-4">Alta tolerancia digestiva. Es el formato estrella para inducir relajación muscular y mejorar el descanso nocturno.</p>
+                <Link href="#comparativa" className="text-[#4ade80] text-sm font-semibold hover:underline">Ver opciones ↓</Link>
+              </div>
+              <div className="bg-[#162944] p-5 rounded-xl border border-white/10 hover:bg-white/5 transition-colors">
+                <h3 className="font-bold text-[#4ade80] mb-2 uppercase text-[11px] tracking-wider">Citrato</h3>
+                <p className="text-white/80 text-sm mb-4">Buena absorción sistémica. Tiene un perfil orgánico que además aporta beneficios para combatir esporádicamente el estreñimiento.</p>
+                <Link href="#comparativa" className="text-[#4ade80] text-sm font-semibold hover:underline">Ver opciones ↓</Link>
+              </div>
+              <div className="bg-[#162944] p-5 rounded-xl border border-white/10 opacity-70">
+                <h3 className="font-bold text-[#fde047] mb-2 uppercase text-[11px] tracking-wider">Óxido (A evitar)</h3>
+                <p className="text-white/80 text-sm">Es el formato más barato en farmacias, pero su absorción celular es inferior al 5%. Prácticamente inútil para estrés y fatiga.</p>
+              </div>
+            </div>
+          </section>
+        )}
 
         <section>
           <div className="flex items-center gap-4 mb-4">
@@ -124,45 +163,66 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
           <p className="text-[#2B2B2B]">{suplemento.bestFormats}</p>
         </section>
 
-        <section className="mt-8">
-          <h2 className="text-2xl font-serif font-semibold text-[#1F3A5F] mb-8">Comparativa de formatos</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse min-w-[600px]">
-              <thead>
-                <tr className="border-b-2 border-[#1F3A5F] text-[#1F3A5F]">
-                  <th className="py-4 px-4 font-semibold">Suplemento</th>
-                  <th className="py-4 px-4 font-semibold">Tipo</th>
-                  <th className="py-4 px-4 font-semibold">Dosis media</th>
-                  <th className="py-4 px-4 font-semibold text-right">Referencia</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[#E5E2DA] bg-white">
-                {(suplemento.recommendedAsins || []).map((asin: string, idx: number) => {
-                  const prod = amazonSupplementsData.find(a => a.asin === asin);
-                  if (!prod) return null;
-                  
-                  return (
-                    <tr key={idx} className="hover:bg-[#F7F6F2]/50 transition-colors">
-                      <td className="py-5 px-4 font-medium text-[#2B2B2B]">{prod.name}</td>
-                      <td className="py-5 px-4 text-[#666666]">{prod.format} {prod.capsules > 0 && `/ ${prod.capsules} ud`}</td>
-                      <td className="py-5 px-4 text-[#666666]">{prod.dose}</td>
-                      <td className="py-5 px-4 text-right">
-                        <TrackedLink
-                          href={getAmazonAffiliateUrl(prod.asin)} 
-                          eventName="amazon_click"
-                          eventData={{ type: 'suplemento_tabla', asin: prod.asin, slug }}
-                          className="inline-block bg-white text-[#1F3A5F] border border-[#E5E2DA] px-4 py-2 rounded-lg text-sm font-medium hover:bg-[#6B8F71] hover:text-white hover:border-[#6B8F71] transition-all"
-                        >
-                          Ver en Amazon
-                        </TrackedLink>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+        <section id="comparativa" className="mt-12 md:mt-16">
+          <h2 className="text-3xl font-serif font-bold text-[#1F3A5F] mb-6">Comparativa de opciones aprobadas</h2>
+          <p className="text-[#666666] mb-8 text-lg">Cribado editorial independiente buscando dosis útiles, formatos sintéticos preactivos y ausencia de excipientes controversiales.</p>
+          
+          <div className="flex flex-col gap-6">
+            {(suplemento.recommendedAsins || []).length === 0 ? (
+              <p className="text-[#666666] italic bg-[#F7F6F2] p-6 rounded-xl border border-[#E5E2DA]">No hay productos aprobados en este momento. Estamos revisando el mercado.</p>
+            ) : (
+              (suplemento.recommendedAsins || []).map((asin: string, idx: number) => {
+                const prod = amazonSupplementsData.find(a => a.asin === asin);
+                if (!prod) return null;
+                
+                return (
+                  <div key={idx} className="bg-white border border-[#E5E2DA] rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-8 items-center md:items-start group">
+                    <div className="w-full md:w-1/4 shrink-0 flex flex-col items-center">
+                      <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-xl overflow-hidden bg-white mb-4 border border-[#E5E2DA] shadow-sm">
+                        <Image src={prod.image} alt={prod.name} fill className="object-contain p-2" />
+                      </div>
+                      <span className="bg-[#1F3A5F] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">{prod.badge || 'Recomendado'}</span>
+                    </div>
+                    
+                    <div className="flex-1 w-full text-center md:text-left">
+                      <h3 className="text-xl md:text-2xl font-serif font-bold text-[#1F3A5F] mb-3 group-hover:text-[#6B8F71] transition-colors">{prod.name}</h3>
+                      <p className="text-[#666666] mb-4 text-sm md:text-base leading-relaxed">{prod.shortDescription}</p>
+                      
+                      <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-[#424842] mb-6 justify-center md:justify-start bg-[#F7F6F2] p-4 rounded-xl border border-[#E5E2DA]/50">
+                        <div className="flex flex-col">
+                          <span className="text-[10px] uppercase font-bold text-[#666666] tracking-wider mb-1">Formato</span>
+                          <span className="font-medium text-[#1F3A5F]">{prod.format}</span>
+                        </div>
+                        <div className="flex flex-col">
+                          <span className="text-[10px] uppercase font-bold text-[#666666] tracking-wider mb-1">Dosis Útil</span>
+                          <span className="font-medium text-[#1F3A5F]">{prod.dose}</span>
+                        </div>
+                        {prod.capsules > 0 && (
+                          <div className="flex flex-col">
+                            <span className="text-[10px] uppercase font-bold text-[#666666] tracking-wider mb-1">Duración</span>
+                            <span className="font-medium text-[#1F3A5F]">{prod.capsules} ud</span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    
+                    <div className="w-full md:w-auto shrink-0 flex flex-col justify-center border-t md:border-t-0 md:border-l border-[#E5E2DA] pt-6 md:pt-0 md:pl-8 mt-2 md:mt-4">
+                      <TrackedLink
+                        href={getAmazonAffiliateUrl(prod.asin)} 
+                        eventName="amazon_click"
+                        eventData={{ type: 'suplemento_card', asin: prod.asin, slug }}
+                        className="w-full text-center bg-[#1F3A5F] text-white font-bold px-8 py-4 rounded-xl shadow-sm hover:shadow-md hover:bg-[#6B8F71] transition-all flex flex-col gap-1 items-center justify-center transform hover:-translate-y-0.5"
+                      >
+                        <span className="text-base text-white">{prod.ctaHint || 'Comprobar disponibilidad'}</span>
+                        <span className="text-[10px] text-white/70 uppercase tracking-widest font-bold">Ver opciones en Amazon</span>
+                      </TrackedLink>
+                    </div>
+                  </div>
+                );
+              })
+            )}
           </div>
-          <p className="text-sm text-[#666666] mt-4 text-center italic">* Los precios y opciones son orientativos. Busque siempre fórmulas libres de aditivos innecesarios.</p>
+          <p className="text-xs text-[#666666] mt-6 text-center italic opacity-80">* Los precios y disponibilidad dependen de Amazon. Las fórmulas pueden cambiar, verifica siempre la etiqueta.</p>
           {suplemento.faq && suplemento.faq.length > 0 && (
             <section className="mt-16 md:mt-24 max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold font-serif text-[#1F3A5F] mb-8 text-center">Dudas Habituales</h2>
@@ -171,32 +231,28 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
           )}
         </section>
 
-        <section className="mt-16 md:mt-24">
-          <div className="border-t border-[#E5E2DA] pt-12">
-            <h2 className="text-3xl font-bold font-serif text-[#1F3A5F] mb-4">Productos Recomendados</h2>
-            <p className="text-[#666666] mb-8 italic text-sm">
-              Selección orientativa basada en formato, dosis habitual, valoración y utilidad general. No sustituye consejo médico.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {amazonSupplementsData
-                .filter(s => s.category === suplemento.categorySlug || s.goalTags.includes(suplemento.categorySlug))
-                .slice(0, 3)
-                .map(s => (
-                  <SupplementAffiliateCard key={s.asin} supplement={s} />
-                ))
-              }
+        {amazonSupplementsData.filter(s => s.category === suplemento.categorySlug || s.goalTags.includes(suplemento.categorySlug)).length > 0 && (
+          <section className="mt-16 md:mt-24">
+            <div className="border-t border-[#E5E2DA] pt-12">
+              <h2 className="text-3xl font-bold font-serif text-[#1F3A5F] mb-4">Relacionados en {suplemento.categorySlug.replace('-', ' ')}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                {amazonSupplementsData
+                  .filter(s => s.category === suplemento.categorySlug || s.goalTags.includes(suplemento.categorySlug))
+                  .slice(0, 3)
+                  .map(s => (
+                    <SupplementAffiliateCard key={s.asin} supplement={s} />
+                  ))
+                }
+              </div>
+              
+              <div className="mt-10 text-center border-b border-[#E5E2DA] pb-12">
+                <a href="/suplementos" className="inline-flex items-center justify-center bg-transparent text-[#1F3A5F] border border-[#E5E2DA] font-bold px-8 py-3.5 rounded-xl hover:bg-[#F7F6F2] transition-colors shadow-sm text-sm uppercase tracking-wide">
+                  Explorar todo el catálogo
+                </a>
+              </div>
             </div>
-            {amazonSupplementsData.filter(s => s.category === suplemento.categorySlug || s.goalTags.includes(suplemento.categorySlug)).length === 0 && (
-              <p className="text-[#666666] text-sm py-4">Revisando próximos productos aprobados para esta categoría...</p>
-            )}
-            
-            <div className="mt-8 text-center border-b border-[#E5E2DA] pb-12">
-              <a href="/suplementos" className="inline-flex items-center justify-center bg-white text-[#1F3A5F] border border-[#1F3A5F] font-bold px-8 py-3 rounded-xl hover:bg-[#1F3A5F] hover:text-white transition-all">
-                Ver todos los suplementos aprobados
-              </a>
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         <section className="mt-8 p-6 bg-[#F7F6F2] border border-[#E5E2DA] rounded-lg text-sm text-[#424842] text-center italic">
           La información de esta guía es divulgativa y no sustituye el consejo de un profesional sanitario.

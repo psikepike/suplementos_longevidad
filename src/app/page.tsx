@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import categorias from '@/data/categorias.json';
 import suplementos from '@/data/suplementos.json';
 import NewsletterForm from '@/components/NewsletterForm';
@@ -14,8 +15,8 @@ export default function Home() {
     <div className="min-h-screen">
       
       {/* Hero Section */}
-      <section className="pt-10 pb-16 md:pt-16 md:pb-24 px-6 lg:px-8 max-w-6xl mx-auto relative overflow-hidden">
-        <div className="max-w-3xl relative z-10">
+      <section className="pt-10 pb-16 md:pt-16 md:pb-24 px-6 lg:px-8 max-w-6xl mx-auto relative overflow-hidden flex flex-col md:flex-row items-center gap-10">
+        <div className="max-w-3xl relative z-10 flex-1">
           <h1 className="font-serif text-[32px] sm:text-4xl md:text-5xl lg:text-[54px] font-bold text-[#1F3A5F] tracking-tight leading-[1.2] lg:leading-[1.12] mb-6">
             Los suplementos más utilizados para envejecer con salud
           </h1>
@@ -51,6 +52,10 @@ export default function Home() {
               <span className="text-[#666666] text-xs font-bold tracking-wider uppercase">Evidencia Actualizada</span>
             </div>
           </div>
+        </div>
+        
+        <div className="hidden md:block w-full flex-1 relative h-[400px] rounded-2xl overflow-hidden shadow-lg border border-[#E5E2DA]">
+          <Image src="/images/home/hero/hero-supplements.jpeg" alt="Suplementos para longevidad" fill className="object-cover" priority />
         </div>
       </section>
 
@@ -180,11 +185,8 @@ export default function Home() {
                </p>
              </div>
              <div className="hidden md:flex w-2/5 justify-center transform hover:-translate-y-2 transition-transform duration-500">
-               <div className="w-56 h-72 bg-white border border-[#E5E2DA] shadow-xl rounded-sm rotate-3 flex items-center justify-center text-center p-8 flex-col bg-gradient-to-br from-white to-[#F7F6F2]">
-                 <div className="w-10 h-10 border border-[#1F3A5F] rounded-full flex items-center justify-center text-[#1F3A5F] font-serif font-bold text-xl mb-4 italic shadow-sm bg-white">S</div>
-                 <h4 className="font-serif font-bold text-2xl text-[#1F3A5F] leading-snug mb-3">7 Hábitos Clave</h4>
-                 <div className="w-12 h-1 bg-[#6B8F71] mb-4"></div>
-                 <p className="text-[10px] text-[#666666] uppercase tracking-widest font-bold">Edición Revisada</p>
+               <div className="relative w-56 h-76 shadow-xl rounded-sm rotate-3 overflow-hidden border border-[#E5E2DA] min-h-[290px]">
+                 <Image src="/images/home/lead-magnet/guia-70.jpeg" alt="La guía para llegar sano a los 70" fill className="object-cover" />
                </div>
              </div>
            </div>
