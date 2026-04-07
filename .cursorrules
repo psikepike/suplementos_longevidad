@@ -1,0 +1,8 @@
+Load and enforce these files as the source of truth for this repository:
+
+/.agents/rules.md
+/.agents/workflow.md
+/.agents/constraints.md
+
+If any prompt conflicts with these files, follow these files.
+Do not silently relax or reinterpret them.
