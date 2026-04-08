@@ -88,13 +88,74 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
         )}
       </header>
 
-      <div className="grid gap-12 lg:gap-16">
-        <section className="bg-white p-8 md:p-10 border border-[#E5E2DA] rounded-xl shadow-sm">
+      <div className={`flex flex-col ${slug === 'magnesio' ? 'gap-8 lg:gap-10' : 'gap-12 lg:gap-16'}`}>
+        
+        {slug === 'magnesio' && (
+          <section className="bg-[#182C49] text-white p-6 md:p-8 rounded-2xl shadow-xl border border-[#264166] order-1">
+            <h2 className="text-xl md:text-2xl font-serif font-bold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-[#4ade80]/20 flex items-center justify-center text-[#4ade80] text-sm">✓</span>
+              ¿Qué formato me conviene?
+            </h2>
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-white/10 group hover:bg-white/5 transition-colors gap-3">
+                <div className="flex items-center gap-3 md:w-5/12">
+                  <span className="w-2 h-2 rounded-full bg-[#4ade80] shadow-[0_0_8px_rgba(74,222,128,0.4)]"></span>
+                  <span className="text-white/90 text-sm md:text-base font-medium tracking-wide">Si buscas descanso nocturno</span>
+                </div>
+                <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
+                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">
+                  Magnesio Bisglicinato
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-white/10 group hover:bg-white/5 transition-colors gap-3">
+                <div className="flex items-center gap-3 md:w-5/12">
+                  <span className="w-2 h-2 rounded-full bg-[#4ade80] shadow-[0_0_8px_rgba(74,222,128,0.4)]"></span>
+                  <span className="text-white/90 text-sm md:text-base font-medium tracking-wide">Si buscas mejor tránsito intestinal</span>
+                </div>
+                <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
+                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">
+                  Magnesio Citrato
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-white/10 group hover:bg-white/5 transition-colors gap-3">
+                <div className="flex items-center gap-3 md:w-5/12">
+                  <span className="w-2 h-2 rounded-full bg-[#4ade80] shadow-[0_0_8px_rgba(74,222,128,0.4)]"></span>
+                  <span className="text-white/90 text-sm md:text-base font-medium tracking-wide">Si priorizas apoyo cognitivo</span>
+                </div>
+                <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
+                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">
+                  Magnesio Treonato
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-rose-500/20 group hover:bg-rose-500/10 transition-colors gap-3 mt-3">
+                <div className="flex items-center gap-3 md:w-5/12">
+                  <span className="w-2 h-2 rounded-full bg-rose-400"></span>
+                  <span className="text-white/70 text-sm font-medium tracking-wide">Baja absorción (Evitar)</span>
+                </div>
+                <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
+                <div className="md:w-6/12 font-bold text-rose-400 text-sm pl-5 md:pl-0">
+                  Óxido de Magnesio
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-8 pt-6 border-t border-white/10 text-right">
+              <Link href="#comparativa" className="inline-block bg-white text-[#1F3A5F] text-sm font-bold px-8 py-3 rounded-xl hover:bg-[#6B8F71] hover:text-white transition-colors shadow-sm">
+                Ver en comparativa ↓
+              </Link>
+            </div>
+          </section>
+        )}
+
+        <section className={slug === 'magnesio' ? 'order-3' : ''}>
           <h2 className="text-2xl font-serif font-semibold text-[#1F3A5F] mb-4">¿Qué es?</h2>
           <p className="text-[#2B2B2B]">{suplemento.whatIsIt}</p>
         </section>
 
-        <section>
+        <section className={slug === 'magnesio' ? 'order-4' : ''}>
           <h2 className="text-2xl font-serif font-semibold text-[#1F3A5F] mb-4">Para qué suele utilizarse</h2>
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <p className="text-[#2B2B2B] flex-1">{suplemento.whatIsItUsedFor}</p>
@@ -106,32 +167,7 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
           </div>
         </section>
 
-        {slug === 'magnesio' && (
-          <section className="bg-[#182C49] text-white p-6 md:p-8 rounded-2xl shadow-xl mt-6 border border-[#264166]">
-            <h2 className="text-xl md:text-2xl font-serif font-bold mb-6 flex items-center gap-3">
-              <span className="w-8 h-8 rounded-full bg-[#4ade80]/20 flex items-center justify-center text-[#4ade80] text-sm">✓</span>
-              ¿Qué formato elegir?
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              <div className="bg-[#162944] p-5 rounded-xl border border-white/10 hover:bg-white/5 transition-colors">
-                <h3 className="font-bold text-[#4ade80] mb-2 uppercase text-[11px] tracking-wider">Bisglicinato</h3>
-                <p className="text-white/80 text-sm mb-4">Alta tolerancia digestiva. Es el formato estrella para inducir relajación muscular y mejorar el descanso nocturno.</p>
-                <Link href="#comparativa" className="text-[#4ade80] text-sm font-semibold hover:underline">Ver opciones ↓</Link>
-              </div>
-              <div className="bg-[#162944] p-5 rounded-xl border border-white/10 hover:bg-white/5 transition-colors">
-                <h3 className="font-bold text-[#4ade80] mb-2 uppercase text-[11px] tracking-wider">Citrato</h3>
-                <p className="text-white/80 text-sm mb-4">Buena absorción sistémica. Tiene un perfil orgánico que además aporta beneficios para combatir esporádicamente el estreñimiento.</p>
-                <Link href="#comparativa" className="text-[#4ade80] text-sm font-semibold hover:underline">Ver opciones ↓</Link>
-              </div>
-              <div className="bg-[#162944] p-5 rounded-xl border border-white/10 opacity-70">
-                <h3 className="font-bold text-[#fde047] mb-2 uppercase text-[11px] tracking-wider">Óxido (A evitar)</h3>
-                <p className="text-white/80 text-sm">Es el formato más barato en farmacias, pero su absorción celular es inferior al 5%. Prácticamente inútil para estrés y fatiga.</p>
-              </div>
-            </div>
-          </section>
-        )}
-
-        <section>
+        <section className={slug === 'magnesio' ? 'order-5' : ''}>
           <div className="flex items-center gap-4 mb-4">
             <h2 className="text-2xl font-serif font-semibold text-[#1F3A5F]">Evidencia actual</h2>
             <span className="bg-[#6B8F71]/10 text-[#6B8F71] px-3 py-1 text-sm rounded-full font-semibold border border-[#6B8F71]/20">
@@ -163,9 +199,17 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
           <p className="text-[#2B2B2B]">{suplemento.bestFormats}</p>
         </section>
 
-        <section id="comparativa" className="mt-12 md:mt-16">
-          <h2 className="text-3xl font-serif font-bold text-[#1F3A5F] mb-6">Comparativa de opciones aprobadas</h2>
-          <p className="text-[#666666] mb-8 text-lg">Cribado editorial independiente buscando dosis útiles, formatos sintéticos preactivos y ausencia de excipientes controversiales.</p>
+        <section id="comparativa" className={slug === 'magnesio' ? 'order-2' : 'mt-12 md:mt-16'}>
+          <h2 className="text-3xl font-serif font-bold text-[#1F3A5F] mb-6">
+            {(suplemento.recommendedAsins || []).length > 1 
+              ? "Comparativa de opciones aprobadas" 
+              : "Opción editorial recomendada"}
+          </h2>
+          <p className="text-[#666666] mb-8 text-[17px] leading-relaxed">
+            {(suplemento.recommendedAsins || []).length > 1 
+              ? "Cribado editorial analizando formatos de alta biodisponibilidad y ausencia probada de excipientes indeseados."
+              : "A la espera de ampliar el catálogo, destacamos de manera aislada la única fórmula actual que supera nuestro cribado editorial (dosis efectiva + formato sin aditivos)."}
+          </p>
           
           <div className="flex flex-col gap-6">
             {(suplemento.recommendedAsins || []).length === 0 ? (
@@ -213,8 +257,8 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
                         eventData={{ type: 'suplemento_card', asin: prod.asin, slug }}
                         className="w-full text-center bg-[#1F3A5F] text-white font-bold px-8 py-4 rounded-xl shadow-sm hover:shadow-md hover:bg-[#6B8F71] transition-all flex flex-col gap-1 items-center justify-center transform hover:-translate-y-0.5"
                       >
-                        <span className="text-base text-white">{prod.ctaHint || 'Comprobar disponibilidad'}</span>
-                        <span className="text-[10px] text-white/70 uppercase tracking-widest font-bold">Ver opciones en Amazon</span>
+                        <span className="text-[17px] text-white font-medium">{prod.ctaHint || 'Ver formato recomendado'}</span>
+                        <span className="text-[11px] text-white/80 uppercase tracking-widest font-bold">Comprobar disponibilidad en Amazon</span>
                       </TrackedLink>
                     </div>
                   </div>
