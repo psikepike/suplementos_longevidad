@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import TrackedLink from './TrackedLink';
+import { getAmazonAffiliateUrl } from '@/utils/amazon';
 
 export interface Book {
   title: string;
@@ -49,7 +50,7 @@ export default function BookCard({ book }: { book: Book }) {
         </div>
         <div>
           <TrackedLink
-            href={book.amazonUrlEs}
+            href={getAmazonAffiliateUrl(book.asin)}
             eventName="amazon_click"
             eventData={{ type: 'libro', asin: book.asin }}
             className="inline-flex w-full md:w-auto items-center justify-center bg-[#1F3A5F] text-white font-medium px-6 py-3 rounded-lg hover:bg-[#6B8F71] transition-colors"
