@@ -63,6 +63,8 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
     ]
   };
 
+  const isVisualFunnel = ['magnesio', 'omega-3', 'creatina-mayores', 'q10'].includes(slug);
+
   return (
     <article className="max-w-4xl mx-auto px-6 lg:px-8 py-12 md:py-20 text-[17px] leading-relaxed">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -86,9 +88,24 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
             <Image src="/images/supplements/magnesio/hero.jpeg" alt={`Hero banner de ${suplemento.name}`} fill className="object-cover" priority />
           </div>
         )}
+        {slug === 'omega-3' && (
+          <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-sm border border-[#E5E2DA] bg-[#1F3A5F]/5">
+            <div className="absolute inset-0 flex items-center justify-center text-[#1F3A5F]/20 font-serif italic text-xl">Omega 3 Esencial</div>
+          </div>
+        )}
+        {slug === 'creatina-mayores' && (
+          <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-sm border border-[#E5E2DA] bg-[#1F3A5F]/5">
+            <div className="absolute inset-0 flex items-center justify-center text-[#1F3A5F]/20 font-serif italic text-xl">Soporte Muscular Sarcopenia</div>
+          </div>
+        )}
+        {slug === 'q10' && (
+          <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-sm border border-[#E5E2DA] bg-[#1F3A5F]/5">
+            <div className="absolute inset-0 flex items-center justify-center text-[#1F3A5F]/20 font-serif italic text-xl">Coenzima Q10 y Estatinas</div>
+          </div>
+        )}
       </header>
 
-      <div className={`flex flex-col ${slug === 'magnesio' ? 'gap-8 lg:gap-10' : 'gap-12 lg:gap-16'}`}>
+      <div className={`flex flex-col ${isVisualFunnel ? 'gap-8 lg:gap-10' : 'gap-12 lg:gap-16'}`}>
         
         {slug === 'magnesio' && (
           <section className="bg-[#182C49] text-white p-6 md:p-8 rounded-2xl shadow-xl border border-[#264166] order-1">
@@ -103,59 +120,135 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
                   <span className="text-white/90 text-sm md:text-base font-medium tracking-wide">Si buscas descanso nocturno</span>
                 </div>
                 <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
-                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">
-                  Magnesio Bisglicinato
-                </div>
+                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">Magnesio Bisglicinato</div>
               </div>
-
               <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-white/10 group hover:bg-white/5 transition-colors gap-3">
                 <div className="flex items-center gap-3 md:w-5/12">
                   <span className="w-2 h-2 rounded-full bg-[#4ade80] shadow-[0_0_8px_rgba(74,222,128,0.4)]"></span>
                   <span className="text-white/90 text-sm md:text-base font-medium tracking-wide">Si buscas mejor tránsito intestinal</span>
                 </div>
                 <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
-                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">
-                  Magnesio Citrato
-                </div>
+                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">Magnesio Citrato</div>
               </div>
-
-              <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-white/10 group hover:bg-white/5 transition-colors gap-3">
-                <div className="flex items-center gap-3 md:w-5/12">
-                  <span className="w-2 h-2 rounded-full bg-[#4ade80] shadow-[0_0_8px_rgba(74,222,128,0.4)]"></span>
-                  <span className="text-white/90 text-sm md:text-base font-medium tracking-wide">Si priorizas apoyo cognitivo</span>
-                </div>
-                <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
-                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">
-                  Magnesio Treonato
-                </div>
-              </div>
-
               <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-rose-500/20 group hover:bg-rose-500/10 transition-colors gap-3 mt-3">
                 <div className="flex items-center gap-3 md:w-5/12">
                   <span className="w-2 h-2 rounded-full bg-rose-400"></span>
                   <span className="text-white/70 text-sm font-medium tracking-wide">Baja absorción (Evitar)</span>
                 </div>
                 <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
-                <div className="md:w-6/12 font-bold text-rose-400 text-sm pl-5 md:pl-0">
-                  Óxido de Magnesio
-                </div>
+                <div className="md:w-6/12 font-bold text-rose-400 text-sm pl-5 md:pl-0">Óxido de Magnesio</div>
               </div>
             </div>
-            
             <div className="mt-8 pt-6 border-t border-white/10 text-right">
-              <Link href="#comparativa" className="inline-block bg-white text-[#1F3A5F] text-sm font-bold px-8 py-3 rounded-xl hover:bg-[#6B8F71] hover:text-white transition-colors shadow-sm">
-                Ver en comparativa ↓
-              </Link>
+              <Link href="#comparativa" className="inline-block bg-white text-[#1F3A5F] text-sm font-bold px-8 py-3 rounded-xl hover:bg-[#6B8F71] hover:text-white transition-colors shadow-sm">Ver en comparativa ↓</Link>
             </div>
           </section>
         )}
 
-        <section className={slug === 'magnesio' ? 'order-3' : ''}>
+        {slug === 'omega-3' && (
+          <section className="bg-[#182C49] text-white p-6 md:p-8 rounded-2xl shadow-xl border border-[#264166] order-1">
+            <h2 className="text-xl md:text-2xl font-serif font-bold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-[#4ade80]/20 flex items-center justify-center text-[#4ade80] text-sm">✓</span>
+              ¿Qué formato me conviene?
+            </h2>
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-white/10 group hover:bg-white/5 transition-colors gap-3">
+                <div className="flex items-center gap-3 md:w-5/12">
+                  <span className="w-2 h-2 rounded-full bg-[#4ade80] shadow-[0_0_8px_rgba(74,222,128,0.4)]"></span>
+                  <span className="text-white/90 text-sm md:text-base font-medium tracking-wide">Máxima absorción cardiovascular</span>
+                </div>
+                <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
+                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">Triglicéridos destilados</div>
+              </div>
+              <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-white/10 group hover:bg-white/5 transition-colors gap-3">
+                <div className="flex items-center gap-3 md:w-5/12">
+                  <span className="w-2 h-2 rounded-full bg-[#4ade80] shadow-[0_0_8px_rgba(74,222,128,0.4)]"></span>
+                  <span className="text-white/90 text-sm md:text-base font-medium tracking-wide">Dietas 100% vegetales (Vegano)</span>
+                </div>
+                <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
+                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">Aceite de Microalgas</div>
+              </div>
+              <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-rose-500/20 group hover:bg-rose-500/10 transition-colors gap-3 mt-3">
+                <div className="flex items-center gap-3 md:w-5/12">
+                  <span className="w-2 h-2 rounded-full bg-rose-400"></span>
+                  <span className="text-white/70 text-sm font-medium tracking-wide">Menor pureza biológica</span>
+                </div>
+                <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
+                <div className="md:w-6/12 font-bold text-rose-400 text-sm pl-5 md:pl-0">Etil Ésteres baratos</div>
+              </div>
+            </div>
+            <div className="mt-8 pt-6 border-t border-white/10 text-right">
+              <Link href="#comparativa" className="inline-block bg-white text-[#1F3A5F] text-sm font-bold px-8 py-3 rounded-xl hover:bg-[#6B8F71] hover:text-white transition-colors shadow-sm">Ver recomendación probada ↓</Link>
+            </div>
+          </section>
+        )}
+
+        {slug === 'creatina-mayores' && (
+          <section className="bg-[#182C49] text-white p-6 md:p-8 rounded-2xl shadow-xl border border-[#264166] order-1">
+            <h2 className="text-xl md:text-2xl font-serif font-bold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-[#4ade80]/20 flex items-center justify-center text-[#4ade80] text-sm">✓</span>
+              ¿Qué sello de calidad priorizar?
+            </h2>
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-white/10 group hover:bg-white/5 transition-colors gap-3">
+                <div className="flex items-center gap-3 md:w-5/12">
+                  <span className="w-2 h-2 rounded-full bg-[#4ade80] shadow-[0_0_8px_rgba(74,222,128,0.4)]"></span>
+                  <span className="text-white/90 text-sm md:text-base font-medium tracking-wide">Evidencia Gold-Standard en sarcopenia</span>
+                </div>
+                <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
+                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">Monohidrato + Sello Creapure</div>
+              </div>
+              <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-rose-500/20 group hover:bg-rose-500/10 transition-colors gap-3 mt-3">
+                <div className="flex items-center gap-3 md:w-5/12">
+                  <span className="w-2 h-2 rounded-full bg-rose-400"></span>
+                  <span className="text-white/70 text-sm font-medium tracking-wide">Riesgo de excipientes y edulcorantes</span>
+                </div>
+                <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
+                <div className="md:w-6/12 font-bold text-rose-400 text-sm pl-5 md:pl-0">Blends pre-entreno deportivos</div>
+              </div>
+            </div>
+            <div className="mt-8 pt-6 border-t border-white/10 text-right">
+              <Link href="#comparativa" className="inline-block bg-white text-[#1F3A5F] text-sm font-bold px-8 py-3 rounded-xl hover:bg-[#6B8F71] hover:text-white transition-colors shadow-sm">Ver formato médico sugerido ↓</Link>
+            </div>
+          </section>
+        )}
+
+        {slug === 'q10' && (
+          <section className="bg-[#182C49] text-white p-6 md:p-8 rounded-2xl shadow-xl border border-[#264166] order-1">
+            <h2 className="text-xl md:text-2xl font-serif font-bold mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 rounded-full bg-[#4ade80]/20 flex items-center justify-center text-[#4ade80] text-sm">✓</span>
+              ¿Qué molécula de Q10 adquirir?
+            </h2>
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-white/10 group hover:bg-white/5 transition-colors gap-3">
+                <div className="flex items-center gap-3 md:w-5/12">
+                  <span className="w-2 h-2 rounded-full bg-[#4ade80] shadow-[0_0_8px_rgba(74,222,128,0.4)]"></span>
+                  <span className="text-white/90 text-sm md:text-base font-medium tracking-wide">Población de riesgo y mayores (&gt;50)</span>
+                </div>
+                <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
+                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">Ubiquinol (forma activa biológica)</div>
+              </div>
+              <div className="flex flex-col md:flex-row md:items-center justify-between bg-[#162944] p-4 md:px-6 rounded-xl border border-white/10 group hover:bg-white/5 transition-colors gap-3">
+                <div className="flex items-center gap-3 md:w-5/12">
+                  <span className="w-2 h-2 rounded-full bg-[#4ade80] shadow-[0_0_8px_rgba(74,222,128,0.4)]"></span>
+                  <span className="text-white/90 text-sm md:text-base font-medium tracking-wide">Prevención estandarizada</span>
+                </div>
+                <div className="hidden md:block text-white/30 font-bold mx-2">→</div>
+                <div className="md:w-6/12 font-bold text-[#4ade80] text-base pl-5 md:pl-0">Ubiquinona liposomal</div>
+              </div>
+            </div>
+            <div className="mt-8 pt-6 border-t border-white/10 text-right">
+              <Link href="#comparativa" className="inline-block bg-white text-[#1F3A5F] text-sm font-bold px-8 py-3 rounded-xl hover:bg-[#6B8F71] hover:text-white transition-colors shadow-sm">Ver alternativas de calidad ↓</Link>
+            </div>
+          </section>
+        )}
+
+        <section className={isVisualFunnel ? 'order-3' : ''}>
           <h2 className="text-2xl font-serif font-semibold text-[#1F3A5F] mb-4">¿Qué es?</h2>
           <p className="text-[#2B2B2B]">{suplemento.whatIsIt}</p>
         </section>
 
-        <section className={slug === 'magnesio' ? 'order-4' : ''}>
+        <section className={isVisualFunnel ? 'order-4' : ''}>
           <h2 className="text-2xl font-serif font-semibold text-[#1F3A5F] mb-4">Para qué suele utilizarse</h2>
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <p className="text-[#2B2B2B] flex-1">{suplemento.whatIsItUsedFor}</p>
@@ -167,7 +260,7 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
           </div>
         </section>
 
-        <section className={slug === 'magnesio' ? 'order-5' : ''}>
+        <section className={isVisualFunnel ? 'order-5' : ''}>
           <div className="flex items-center gap-4 mb-4">
             <h2 className="text-2xl font-serif font-semibold text-[#1F3A5F]">Evidencia actual</h2>
             <span className="bg-[#6B8F71]/10 text-[#6B8F71] px-3 py-1 text-sm rounded-full font-semibold border border-[#6B8F71]/20">
@@ -199,7 +292,7 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
           <p className="text-[#2B2B2B]">{suplemento.bestFormats}</p>
         </section>
 
-        <section id="comparativa" className={slug === 'magnesio' ? 'order-2' : 'mt-12 md:mt-16'}>
+        <section id="comparativa" className={isVisualFunnel ? 'order-2' : 'mt-12 md:mt-16'}>
           <h2 className="text-3xl font-serif font-bold text-[#1F3A5F] mb-6">
             {(suplemento.recommendedAsins || []).length > 1 
               ? "Comparativa de opciones aprobadas" 
@@ -208,7 +301,7 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
           <p className="text-[#666666] mb-8 text-[17px] leading-relaxed">
             {(suplemento.recommendedAsins || []).length > 1 
               ? "Cribado editorial analizando formatos de alta biodisponibilidad y ausencia probada de excipientes indeseados."
-              : "A la espera de ampliar el catálogo, destacamos de manera aislada la única fórmula actual que supera nuestro cribado editorial (dosis efectiva + formato sin aditivos)."}
+              : "A la espera de ampliar el catálogo, destacamos de manera aislada la única fórmula actual que supera nuestro cribado editorial."}
           </p>
           
           <div className="flex flex-col gap-6">
