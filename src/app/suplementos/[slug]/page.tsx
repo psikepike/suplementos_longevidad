@@ -368,6 +368,18 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
           )}
         </section>
 
+        {/* INTERLINKING INTERNO */}
+        <section className="mt-16 bg-[#F7F6F2] border border-[#E5E2DA] p-8 md:p-10 rounded-2xl shadow-sm">
+          <h2 className="text-xl md:text-2xl font-serif font-bold text-[#1F3A5F] mb-4 text-center md:text-left">Otras guías recomendadas</h2>
+          <p className="text-[#666666] mb-8 text-sm md:text-base text-center md:text-left">Explora nuestros análisis sobre otros compuestos respaldados por la evidencia.</p>
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+             {slug !== 'omega-3' && <Link href="/suplementos/omega-3" className="bg-white border border-[#E5E2DA] text-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Omega 3 (EPA/DHA)</Link>}
+             {slug !== 'q10' && <Link href="/suplementos/q10" className="bg-white border border-[#E5E2DA] text-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Coenzima Q10</Link>}
+             {slug !== 'creatina-mayores' && <Link href="/suplementos/creatina-mayores" className="bg-white border border-[#E5E2DA] text-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Creatina 50+</Link>}
+             {slug !== 'magnesio' && <Link href="/suplementos/magnesio" className="bg-white border border-[#E5E2DA] text-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Magnesio Clave</Link>}
+          </div>
+        </section>
+
         {amazonSupplementsData.filter(s => s.category === suplemento.categorySlug || s.goalTags.includes(suplemento.categorySlug)).length > 0 && (
           <section className="mt-16 md:mt-24">
             <div className="border-t border-[#E5E2DA] pt-12">
