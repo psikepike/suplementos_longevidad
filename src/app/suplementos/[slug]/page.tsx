@@ -293,72 +293,85 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
         </section>
 
         <section id="comparativa" className={isVisualFunnel ? 'order-2' : 'mt-12 md:mt-16'}>
-          <h2 className="text-3xl font-serif font-bold text-[#1F3A5F] mb-6">
-            {(suplemento.recommendedAsins || []).length > 1 
-              ? "Comparativa de opciones aprobadas" 
-              : "Opción editorial recomendada"}
-          </h2>
-          <p className="text-[#666666] mb-8 text-[17px] leading-relaxed">
-            {(suplemento.recommendedAsins || []).length > 1 
-              ? "Cribado editorial analizando formatos de alta biodisponibilidad y ausencia probada de excipientes indeseados."
-              : "A la espera de ampliar el catálogo, destacamos de manera aislada la única fórmula actual que supera nuestro cribado editorial."}
-          </p>
-          
-          <div className="flex flex-col gap-6">
-            {(suplemento.recommendedAsins || []).length === 0 ? (
-              <p className="text-[#666666] italic bg-[#F7F6F2] p-6 rounded-xl border border-[#E5E2DA]">No hay productos aprobados en este momento. Estamos revisando el mercado.</p>
-            ) : (
-              (suplemento.recommendedAsins || []).map((asin: string, idx: number) => {
-                const prod = amazonSupplementsData.find(a => a.asin === asin);
-                if (!prod) return null;
+          {(() => {
+            const validProducts = (suplemento.recommendedAsins || [])
+              .map((asin: string) => amazonSupplementsData.find(a => a.asin === asin))
+              .filter((prod: typeof amazonSupplementsData[number] | undefined) => 
+                prod && 
+                !prod.asin.includes('PENDIENTE') && 
+                !prod.amazonUrl.includes('PENDIENTE')
+              );
+
+            return (
+              <>
+                <h2 className="text-3xl font-serif font-bold text-[#1F3A5F] mb-6">
+                  {validProducts.length > 1 
+                    ? "Comparativa de opciones aprobadas" 
+                    : "Opción editorial recomendada"}
+                </h2>
+                <p className="text-[#666666] mb-8 text-[17px] leading-relaxed">
+                  {validProducts.length > 1 
+                    ? "Cribado editorial analizando formatos de alta biodisponibilidad y ausencia probada de excipientes indeseados."
+                    : "A la espera de ampliar el catálogo, destacamos de manera aislada la única fórmula actual que supera nuestro cribado editorial."}
+                </p>
                 
-                return (
-                  <div key={idx} className="bg-white border border-[#E5E2DA] rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-8 items-center md:items-start group">
-                    <div className="w-full md:w-1/4 shrink-0 flex flex-col items-center">
-                      <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-xl overflow-hidden bg-white mb-4 border border-[#E5E2DA] shadow-sm">
-                        <Image src={prod.image} alt={prod.name} fill className="object-contain p-2" />
-                      </div>
-                      <span className="bg-[#1F3A5F] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">{prod.badge || 'Recomendado'}</span>
-                    </div>
-                    
-                    <div className="flex-1 w-full text-center md:text-left">
-                      <h3 className="text-xl md:text-2xl font-serif font-bold text-[#1F3A5F] mb-3 group-hover:text-[#6B8F71] transition-colors">{prod.name}</h3>
-                      <p className="text-[#666666] mb-4 text-sm md:text-base leading-relaxed">{prod.shortDescription}</p>
+                <div className="flex flex-col gap-6">
+                  {validProducts.length === 0 ? (
+                    <p className="text-[#666666] italic bg-[#F7F6F2] p-6 rounded-xl border border-[#E5E2DA]">No hay productos aprobados en este momento con evidencia suficiente de mercado. Estamos revisando continuamente.</p>
+                  ) : (
+                    validProducts.map((prod, idx: number) => {
+                      if (!prod) return null;
                       
-                      <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-[#424842] mb-6 justify-center md:justify-start bg-[#F7F6F2] p-4 rounded-xl border border-[#E5E2DA]/50">
-                        <div className="flex flex-col">
-                          <span className="text-[10px] uppercase font-bold text-[#666666] tracking-wider mb-1">Formato</span>
-                          <span className="font-medium text-[#1F3A5F]">{prod.format}</span>
-                        </div>
-                        <div className="flex flex-col">
-                          <span className="text-[10px] uppercase font-bold text-[#666666] tracking-wider mb-1">Dosis Útil</span>
-                          <span className="font-medium text-[#1F3A5F]">{prod.dose}</span>
-                        </div>
-                        {prod.capsules > 0 && (
-                          <div className="flex flex-col">
-                            <span className="text-[10px] uppercase font-bold text-[#666666] tracking-wider mb-1">Duración</span>
-                            <span className="font-medium text-[#1F3A5F]">{prod.capsules} ud</span>
+                      return (
+                        <div key={idx} className="bg-white border border-[#E5E2DA] rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-8 items-center md:items-start group">
+                          <div className="w-full md:w-1/4 shrink-0 flex flex-col items-center">
+                            <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-xl overflow-hidden bg-white mb-4 border border-[#E5E2DA] shadow-sm">
+                              <Image src={prod.image} alt={prod.name} fill className="object-contain p-2" />
+                            </div>
+                            <span className="bg-[#1F3A5F] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">{prod.badge || 'Recomendado'}</span>
                           </div>
-                        )}
-                      </div>
-                    </div>
-                    
-                    <div className="w-full md:w-auto shrink-0 flex flex-col justify-center border-t md:border-t-0 md:border-l border-[#E5E2DA] pt-6 md:pt-0 md:pl-8 mt-2 md:mt-4">
-                      <TrackedLink
-                        href={getAmazonAffiliateUrl(prod.asin)} 
-                        eventName="amazon_click"
-                        eventData={{ type: 'suplemento_card', asin: prod.asin, slug }}
-                        className="w-full text-center bg-[#1F3A5F] text-white font-bold px-8 py-4 rounded-xl shadow-sm hover:shadow-md hover:bg-[#6B8F71] transition-all flex flex-col gap-1 items-center justify-center transform hover:-translate-y-0.5"
-                      >
-                        <span className="text-[17px] text-white font-medium">{prod.ctaHint || 'Ver formato recomendado'}</span>
-                        <span className="text-[11px] text-white/80 uppercase tracking-widest font-bold">Comprobar disponibilidad en Amazon</span>
-                      </TrackedLink>
-                    </div>
-                  </div>
-                );
-              })
-            )}
-          </div>
+                          
+                          <div className="flex-1 w-full text-center md:text-left">
+                            <h3 className="text-xl md:text-2xl font-serif font-bold text-[#1F3A5F] mb-3 group-hover:text-[#6B8F71] transition-colors">{prod.name}</h3>
+                            <p className="text-[#666666] mb-4 text-sm md:text-base leading-relaxed">{prod.shortDescription}</p>
+                            
+                            <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm text-[#424842] mb-6 justify-center md:justify-start bg-[#F7F6F2] p-4 rounded-xl border border-[#E5E2DA]/50">
+                              <div className="flex flex-col">
+                                <span className="text-[10px] uppercase font-bold text-[#666666] tracking-wider mb-1">Formato</span>
+                                <span className="font-medium text-[#1F3A5F]">{prod.format}</span>
+                              </div>
+                              <div className="flex flex-col">
+                                <span className="text-[10px] uppercase font-bold text-[#666666] tracking-wider mb-1">Dosis Útil</span>
+                                <span className="font-medium text-[#1F3A5F]">{prod.dose}</span>
+                              </div>
+                              {prod.capsules > 0 && (
+                                <div className="flex flex-col">
+                                  <span className="text-[10px] uppercase font-bold text-[#666666] tracking-wider mb-1">Duración</span>
+                                  <span className="font-medium text-[#1F3A5F]">{prod.capsules} ud</span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                          
+                          <div className="w-full md:w-auto shrink-0 flex flex-col justify-center border-t md:border-t-0 md:border-l border-[#E5E2DA] pt-6 md:pt-0 md:pl-8 mt-2 md:mt-4">
+                            <TrackedLink
+                              href={getAmazonAffiliateUrl(prod.asin)} 
+                              eventName="amazon_click"
+                              eventData={{ type: 'suplemento_card', asin: prod.asin, slug }}
+                              className="w-full text-center bg-[#1F3A5F] text-white font-bold px-8 py-4 rounded-xl shadow-sm hover:shadow-md hover:bg-[#6B8F71] transition-all flex flex-col gap-1 items-center justify-center transform hover:-translate-y-0.5"
+                            >
+                              <span className="text-[17px] text-white font-medium">{prod.ctaHint || 'Ver formato recomendado'}</span>
+                              <span className="text-[11px] text-white/80 uppercase tracking-widest font-bold">Comprobar disponibilidad en Amazon</span>
+                            </TrackedLink>
+                          </div>
+                        </div>
+                      );
+                    })
+                  )}
+                </div>
+              </>
+            );
+          })()}
           <p className="text-xs text-[#666666] mt-6 text-center italic opacity-80">* Los precios y disponibilidad dependen de Amazon. Las fórmulas pueden cambiar, verifica siempre la etiqueta.</p>
           {suplemento.faq && suplemento.faq.length > 0 && (
             <section className="mt-16 md:mt-24 max-w-3xl mx-auto">

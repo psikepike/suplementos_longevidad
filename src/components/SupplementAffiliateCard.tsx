@@ -22,6 +22,10 @@ export interface AmazonSupplement {
 }
 
 export default function SupplementAffiliateCard({ supplement }: { supplement: AmazonSupplement }) {
+  if (!supplement || !supplement.asin || supplement.asin.includes('PENDIENTE') || !supplement.amazonUrl || supplement.amazonUrl.includes('PENDIENTE')) {
+    return null;
+  }
+
   return (
     <div className="flex flex-col bg-white rounded-xl overflow-hidden border border-[#E5E2DA] transition-all hover:shadow-md">
       <div className="relative h-56 bg-[#F7F6F2] border-b border-[#E5E2DA] flex items-center justify-center p-6">
