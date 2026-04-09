@@ -3,7 +3,11 @@
     "slug": "magnesio-bisglicinato-premium",
     "name": "Magnesio Bisglicinato Alta Absorción",
     "category": "sueño",
-    "goalTags": ["sueño", "memoria", "articulaciones"],
+    "goalTags": [
+      "sueño",
+      "memoria",
+      "articulaciones"
+    ],
     "format": "Cápsulas Vegetales",
     "dose": "200mg elementales",
     "capsules": 120,
@@ -22,7 +26,11 @@
     "slug": "creatina-creapure",
     "name": "Creatina Monohidrato (Creapure)",
     "category": "articulaciones",
-    "goalTags": ["energia", "articulaciones", "longevidad"],
+    "goalTags": [
+      "energia",
+      "articulaciones",
+      "longevidad"
+    ],
     "format": "Polvo sabor neutro",
     "dose": "300g (100 tomas)",
     "capsules": 0,
@@ -41,7 +49,11 @@
     "slug": "omega-dha-heart",
     "name": "Omega 3 Destilado (Alto EPA/DHA)",
     "category": "corazón",
-    "goalTags": ["corazón", "memoria", "longevidad"],
+    "goalTags": [
+      "corazón",
+      "memoria",
+      "longevidad"
+    ],
     "format": "Perlas recubrimiento blando",
     "dose": "1000mg combinados",
     "capsules": 60,
@@ -55,5 +67,74 @@
     "asin": "B09MN4L",
     "image": "https://images.unsplash.com/photo-1620353457197-bb1f5a58a69a?q=80&w=400&fit=crop",
     "evidenceLevel": "Alta"
+  },
+  {
+    "slug": "vitamina-d3-k2-gotas",
+    "name": "Vitamina D3 + K2 (MK-7) Base Orgánica",
+    "category": "inmunidad-y-huesos",
+    "goalTags": [
+      "huesos",
+      "inmunidad",
+      "longevidad"
+    ],
+    "format": "Comprimidos",
+    "dose": "2000 UI D3 + 100 µg K2 MK7",
+    "capsules": 240,
+    "price": "18.90€",
+    "rating": 4.8,
+    "reviewCount": 11200,
+    "badge": "Top Inmunidad",
+    "shortDescription": "Dúo altamente biodisponible (K2 como MK7 all-trans 99,7%). Formato clave para proteger la densidad ósea y evitar la calcificación vascular a medida que envejecemos.",
+    "ctaHint": "Ver formato dispensador",
+    "amazonUrl": "https://www.amazon.es/dp/B0C5XX6YRJ",
+    "asin": "B0C5XX6YRJ",
+    "image": "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?q=80&w=400&fit=crop",
+    "evidenceLevel": "Alta"
+  },
+  {
+    "slug": "berberina-puro-hcl",
+    "name": "Berberina Aristata Pura (WeightWorld)",
+    "category": "metabolismo",
+    "goalTags": [
+      "metabolismo",
+      "energía",
+      "corazón"
+    ],
+    "format": "Cápsulas HCL",
+    "dose": "500mg garantizados",
+    "capsules": 120,
+    "price": "24.50€",
+    "rating": 4.6,
+    "reviewCount": 845,
+    "badge": "Top Glucemia",
+    "shortDescription": "Extracto botánico concentrado al 85% de alcaloides. Diseñado para mitigar las curvas postprandiales, un vector crítico para mantener la longevidad metabólica y la sensibilidad insulinémica a los 50+.",
+    "ctaHint": "Acceder a grado clínico",
+    "amazonUrl": "https://www.amazon.es/dp/B0CHRNR4QH",
+    "asin": "B0CHRNR4QH",
+    "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=400&fit=crop",
+    "evidenceLevel": "Alta"
+  },
+  {
+    "slug": "colageno-peptidos-bioactivos",
+    "name": "Péptidos de Colágeno Bovino (Ancient+Brave)",
+    "category": "articulaciones",
+    "goalTags": [
+      "articulaciones",
+      "piel",
+      "sarcopenia"
+    ],
+    "format": "Polvo Hidrolizado",
+    "dose": "5 - 10g diarios",
+    "capsules": 0,
+    "price": "29.90€",
+    "rating": 4.9,
+    "reviewCount": 4350,
+    "badge": "Top Cartílago",
+    "shortDescription": "Péptidos hidrolizados asimilables tipo 1 procedentes de vacas de pasto europeas. Nutrición estructural intensiva vital para combatir la sarcopenia, densidad ósea y preservar la elasticidad articular sénior.",
+    "ctaHint": "Mirar envase semestral",
+    "amazonUrl": "https://www.amazon.es/dp/B0B4BBND37",
+    "asin": "B0B4BBND37",
+    "image": "https://images.unsplash.com/photo-1594824432166-e822f771aece?q=80&w=400&fit=crop",
+    "evidenceLevel": "Media"
   }
 ]

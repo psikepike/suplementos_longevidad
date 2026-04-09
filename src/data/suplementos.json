@@ -12,7 +12,9 @@
     "sideEffects": "Dosis altas pueden ocasionar un leve efecto laxante o malestar gástrico transitorio, especialmente si se usa formato óxido o citrato.",
     "whoShouldAvoid": "Personas con insuficiencia renal o que tomen cierto tipo de diuréticos deben consultar siempre a un profesional sanitario antes de comenzar su uso.",
     "bestFormats": "Bisglicinato (alta tolerancia, ideal para el descanso nocturno), Treonato (potencial para apoyo cognitivo), Citrato (buena absorción, puede ser relajante intestinal).",
-    "recommendedAsins": ["B00EJW0"],
+    "recommendedAsins": [
+      "B00EJW0"
+    ],
     "faq": [
       {
         "question": "¿En qué momento del día conviene tomar el magnesio?",
@@ -33,7 +35,9 @@
     "sideEffects": "Ocasionalmente puede provocar un ligero sabor a pescado (reflujo). En dosis extremadamente altas puede alterar la capacidad de coagulación normal.",
     "whoShouldAvoid": "Quienes toman medicación anticoagulante (como Sintrom u otros) deben tener especial precaución e informar a su equipo médico.",
     "bestFormats": "Aceite de pescado molecularmente destilado en forma de triglicéridos o aceite de krill. Para personas veganas la mejor alternativa es el aceite extraído de microalgas.",
-    "recommendedAsins": ["B09MN4L"],
+    "recommendedAsins": [
+      "B09MN4L"
+    ],
     "faq": [
       {
         "question": "¿Cómo puedo evitar el reflujo con sabor a pescado?",
@@ -54,7 +58,9 @@
     "sideEffects": "Frecuentemente causa una ligera retención de agua intracelular (beneficioso a nivel muscular). Al inicio puede dar ligeras molestias gástricas si se toma sin líquido suficiente.",
     "whoShouldAvoid": "Personas diagnosticadas con patologías orgánicas del riñón deben evitar suplementos de alta carga de creatina sin supervisión nefróloga.",
     "bestFormats": "Monohidrato de Creatina pura (con sello Creapure a ser posible).",
-    "recommendedAsins": ["B08KLQ9"],
+    "recommendedAsins": [
+      "B08KLQ9"
+    ],
     "faq": [
       {
         "question": "¿Debo hacer una fase de carga tomando mucho durante una semana?",
@@ -80,6 +86,75 @@
       {
         "question": "¿Es obligatorio elegir Ubiquinol?",
         "answer": "Aunque el Ubiquinol se considera la forma activa, la Ubiquinona tradicional ha sido la más estudiada en ensayos clínicos a largo plazo. Ambas son válidas."
+      }
+    ]
+  },
+  {
+    "slug": "vitamina-d",
+    "name": "Vitamina D (D3 + K2)",
+    "categorySlug": "inmunidad-y-huesos",
+    "shortDescription": "Hormona clave para la salud ósea e inmunológica. Su déficit es casi universal en edades avanzadas, obligando a vigilancia clínica.",
+    "evidenceLevel": "Alta",
+    "whatIsIt": "Técnicamente una pro-hormona sintetizada por la piel al exponerse al sol. En suplementos comerciales suele presentarse como Colecalciferol (D3).",
+    "whatIsItUsedFor": "Se usa mayoritariamente como apoyo preventivo para la densidad mineral frente al envejecimiento óseo, y la regulación normal de la inmunidad.",
+    "evidence": "Amplio consenso general sobre su importancia. Diversos estudios sugieren que mantener niveles séricos adecuados apoya el funcionamiento del sistema inmune y la salud ósea a largo plazo.",
+    "standardDose": "1000 a 4000 UI diarias, idealmente acompañada de grasas u omega 3 para absorción al ser liposoluble.",
+    "sideEffects": "En dosificaciones convencionales carece de riesgos. En hipercargas extremas (>10,000 UI diarias en meses) podría causar nefrocalcinosis si no se asocia a Vitamina K2.",
+    "whoShouldAvoid": "Pacientes con hipercalcemia (niveles altos de calcio en sangre) no diagnosticada.",
+    "bestFormats": "Vitamina D3 (Colecalciferol) suspendida en medio lipídico emparejada con Vitamina K2 (MK-7) para desviar el calcio de las arterias al hueso.",
+    "recommendedAsins": [
+      "B01MS2B"
+    ],
+    "faq": [
+      {
+        "question": "¿Es obligatorio el ratio con K2?",
+        "answer": "La Vitamina K2 activa las proteínas Gla que impiden que el calcio asimilado por la Vitamina D se acumule en válvulas cardíacas o riñones, llevándolo al cartílago."
+      }
+    ]
+  },
+  {
+    "slug": "berberina",
+    "name": "Berberina",
+    "categorySlug": "metabolismo",
+    "shortDescription": "Alcaloide botánico con alta evidencia científica en la estabilización de glucosa y reversión de la resistencia epitelial a la insulina.",
+    "evidenceLevel": "Alta",
+    "whatIsIt": "La berberina es un compuesto altamente concentrado y aislado de la planta Berberis Aristata, muy valorado en fitomedicina.",
+    "whatIsItUsedFor": "A menudo investigada en relación al control de los perfiles de síndrome metabólico (prediabetes, colesterol disfuncional).",
+    "evidence": "Diferentes análisis sugieren que puede jugar un papel de apoyo interesante en la regulación del metabolismo de la glucosa en perfiles concretos, aunque siempre bajo supervisión.",
+    "standardDose": "500 mg antes de cada comida de impacto hiperglucémico (2-3 veces al día en curvas fuertes).",
+    "sideEffects": "Disfunción gastrointestinal inicial. En ciertos perfiles puede causar constipación leve, aunque revierte en semanas.",
+    "whoShouldAvoid": "Personas que ya utilicen terapias para modular la diabetes, salvo supervisión estricta médica por precaución de hipoglucemia cruzada.",
+    "bestFormats": "Extracto seco garantizado al 97% de pureza o formulaciones de encapsulado HCL puro.",
+    "recommendedAsins": [
+      "B0CB3D5"
+    ],
+    "faq": [
+      {
+        "question": "¿Sirve para perder peso sin modificar hábitos?",
+        "answer": "Mejora fuertemente la sensibilidad a la insulina celular y frena el acúmulo de lípido endógeno, pero funciona como catalizador, no como pastilla vacía que revierta malos tratos crónicos."
+      }
+    ]
+  },
+  {
+    "slug": "colageno",
+    "name": "Colágeno Peptídico",
+    "categorySlug": "articulaciones",
+    "shortDescription": "Proteína fundamental de sostén de cartílago y matriz dermal. Su correcta suplementación palía el desgaste estructural ligado a la senescencia celular.",
+    "evidenceLevel": "Media",
+    "whatIsIt": "El colágeno es el pilar arquitectónico articular del cuerpo. Al digerirlo roto en cadenas cortas (hidrólisis), la pared intestinal lo absorbe masivamente.",
+    "whatIsItUsedFor": "Apoyo general enfocado en el mantenimiento de la matriz estructural articular y cutánea con el paso del tiempo.",
+    "evidence": "Existen intervenciones clínicas que apoyan su utilidad, aunque el rigor de los resultados puede variar radicalmente según el peso molecular del formato y la patente utilizada.",
+    "standardDose": "10 a 15 gramos diarios de manera contínua. Diluido en vasos templados.",
+    "sideEffects": "Raras molestias de digestión en dosis monstruosas.",
+    "whoShouldAvoid": "Apto en la inmensa mayoría debido a su naturaleza elemental intercelular.",
+    "bestFormats": "Péptidos Hidrolizados y Bioactivos puros de bajo sabor, reforzados idealmente con Ácido Hialurónico orgánico.",
+    "recommendedAsins": [
+      "B01G27C"
+    ],
+    "faq": [
+      {
+        "question": "¿Realmente la proteína sobrevive en la digestión?",
+        "answer": "El cuerpo metaboliza las moléculas a aminoácidos básicos, sí, pero su ingesta empuja altísimas concentraciones exclusivas de Glicina e Hidroxiprolina estimulando los fibroblastos diana."
       }
     ]
   }
