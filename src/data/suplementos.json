@@ -226,5 +226,74 @@
         "answer": "No. La ficción de que destruye riñones sanos es un mito superado médicamente hace décadas. Solo un riñón previamente enfermo requiere la pauta contraria."
       }
     ]
+  },
+  {
+    "slug": "ashwagandha",
+    "name": "Ashwagandha (KSM-66)",
+    "categorySlug": "energia-y-fatiga",
+    "shortDescription": "Adaptógeno tradicional estudiado por su posible apoyo frente al estrés continuo y el equilibrio del ritmo diario.",
+    "evidenceLevel": "Alta",
+    "whatIsIt": "Es una de las hierbas más importantes del Ayurveda. Botánicamente conocida como Withania somnifera, se clasifica como un adaptógeno, lo cual sugiere que ayudaría al cuerpo a gestionar el estrés.",
+    "whatIsItUsedFor": "Habitualmente considerada para apoyar un estado mental más templado y acompañar saludablemente el descanso al mitigar la tensión percibida.",
+    "evidence": "Múltiples ensayos clínicos avalan la capacidad de extractos estandarizados (como el KSM-66) para observar mejoras en las sensaciones de desgaste y en el control del estrés general.",
+    "standardDose": "Entre 300 y 600 mg diarios de un extracto estandarizado de raíz. Se puede tomar en una dosis única o fraccionada.",
+    "sideEffects": "Generalmente muy segura a dosis sugeridas. Puede provocar leves molestias digestivas en personas sensibles.",
+    "whoShouldAvoid": "Embarazadas, personas con hipertiroidismo o trastornos autoinmunes graves deben consultar siempre antes de tomar adaptógenos.",
+    "bestFormats": "Extractos patentados extraídos exclusivamente de la raíz, como KSM-66 o Sensoril, garantizando un ratio estandarizado de withanólidos.",
+    "recommendedAsins": [
+      "PENDIENTE_ASHWAGANDHA"
+    ],
+    "faq": [
+      {
+        "question": "¿Dará sueño si la tomo por la mañana?",
+        "answer": "No es un sedante directo. Suele utilizarse para estabilizar la sobreactivación sin causar letargo, ayudando a preservar la energía natural."
+      }
+    ]
+  },
+  {
+    "slug": "zinc",
+    "name": "Zinc (Picolinato)",
+    "categorySlug": "inmunidad-y-huesos",
+    "shortDescription": "Mineral esencial involucrado activamente en la función inmune y la regulación del balance orgánico defensivo.",
+    "evidenceLevel": "Alta",
+    "whatIsIt": "El zinc es un micronutriente esencial que el cuerpo humano no puede sintetizar endógenamente ni almacenar en grandes proporciones, requiriendo ingesta constante.",
+    "whatIsItUsedFor": "Vital para el funcionamiento de cientos de enzimas. Da soporte a las defensas, apoya la función hormonal general y protege a las células frente al daño oxidativo.",
+    "evidence": "Diferentes análisis apoyan la suplementación en grupos de edad que absorben menos zinc por vía dietética, ayudando a mitigar la progresiva inmunosenescencia.",
+    "standardDose": "15 a 30 mg elementales al día. Evitar sobrepasar sistemáticamente los 40mg diarios a largo plazo sin control de un profesional.",
+    "sideEffects": "Sensación de náusea si se toma con el estómago completamente vacío. Dosis muy altas y sostenidas limitan la correcta absorción de Cobre.",
+    "whoShouldAvoid": "Apto para prácticamente todo el mundo dentro de su dosis recomendada.",
+    "bestFormats": "Formatos quelados como el Picolinato de Zinc o el Bisglicinato, que aseguran una óptima asimilación mineral evadiendo molestias digestivas.",
+    "recommendedAsins": [
+      "PENDIENTE_ZINC"
+    ],
+    "faq": [
+      {
+        "question": "¿Debería emparejarlo siempre con cobre?",
+        "answer": "A menos que suplementes dosis altas (mayores a 30-40mg al día) prolongadamente, las dosis diarias cautelares (10-15mg) rara vez provocan desbalances bruscos del cobre intracelular."
+      }
+    ]
+  },
+  {
+    "slug": "vitamina-b12",
+    "name": "Vitamina B12 (Metilcobalamina)",
+    "categorySlug": "corazon-y-circulacion",
+    "shortDescription": "Nutriente clave para el mantenimiento del sistema nervioso y la energía celular, especialmente necesario a partir de la barrera de los 50 años.",
+    "evidenceLevel": "Alta",
+    "whatIsIt": "Vitamina del grupo B, hidrosoluble. Indispensable para la correcta estructuración celular y el mantenimiento de la mielina protectora de los nervios.",
+    "whatIsItUsedFor": "Empleada para apoyar la salud cognitiva, disminuir el cansancio recurrente y aportar soporte nutricional al tejido perimetral sensitivo.",
+    "evidence": "El consenso generalizado recalca su uso en perfiles senior, puesto que muchos desarrollan dificultades digestivas silenciosas que impiden extraer correctamente la B12 de fuentes cárnicas.",
+    "standardDose": "Entre 500 mcg y 1000 mcg (microgramos) al día. Su protocolo oral debe ser de microgramos masivos porque la asimilación pasiva retiene porcentajes ínfimos.",
+    "sideEffects": "Excepcionalmente segura. Al ser hidrosoluble el cuerpo excreta excedentes. En preparaciones inyectables, en el pasado se documentaron brotes residuales de acné.",
+    "whoShouldAvoid": "Resulta fundamental en población de riesgo: perfiles maduros, personas con dieta de predominancia vegetal o usuarios habituales de protectores estomacales.",
+    "bestFormats": "Metilcobalamina (forma metilada de paso directo a sistema) de modalidad sublingual, evadiendo la necesidad de buena viabilidad estomacal para su transferencia.",
+    "recommendedAsins": [
+      "PENDIENTE_B12"
+    ],
+    "faq": [
+      {
+        "question": "¿Pasa algo si los análisis muestran que mi B12 está alta por tomar la pauta sublingual?",
+        "answer": "Mientras se deba exclusivamente a la ingesta transitoria del formato hidrosoluble B12, el entorno urinario regula la excreción. Sin embargo, no excedas la indicación del envase sin acompañamiento asistencial."
+      }
+    ]
   }
 ]

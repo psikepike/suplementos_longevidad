@@ -205,5 +205,74 @@
     "asin": "PENDIENTE_PROTEINA",
     "image": "https://images.unsplash.com/photo-1526403613009-43c2da9eff2f?q=80&w=400&fit=crop",
     "evidenceLevel": "Alta"
+  },
+  {
+    "slug": "ashwagandha-ksm66",
+    "name": "Ashwagandha KSM-66 Premium",
+    "category": "sueño",
+    "goalTags": [
+      "estrés",
+      "sueño",
+      "energía"
+    ],
+    "format": "Cápsulas Vegetales",
+    "dose": "500-600mg extracto de raíz",
+    "capsules": 60,
+    "price": "19.90€",
+    "rating": 4.6,
+    "reviewCount": 2150,
+    "badge": "Top Adaptógeno",
+    "shortDescription": "Extracto estandarizado KSM-66. Diseñado para apoyar la resiliencia natural frente a picos de estrés cotidiano de manera suave.",
+    "ctaHint": "Mirar extracto certificado",
+    "amazonUrl": "PENDIENTE_URL_ASHWAGANDHA",
+    "asin": "PENDIENTE_ASHWAGANDHA",
+    "image": "https://images.unsplash.com/photo-1596700512686-224424ee189a?q=80&w=400&fit=crop",
+    "evidenceLevel": "Alta"
+  },
+  {
+    "slug": "zinc-picolinato-absorcion",
+    "name": "Zinc (Forma Picolinato) Puro",
+    "category": "inmunidad-y-huesos",
+    "goalTags": [
+      "inmunidad",
+      "hormonas",
+      "longevidad"
+    ],
+    "format": "Comprimidos Pequeños",
+    "dose": "15mg elementales",
+    "capsules": 120,
+    "price": "14.50€",
+    "rating": 4.8,
+    "reviewCount": 1850,
+    "badge": "Inmunidad Sénior",
+    "shortDescription": "Fórmula orgánica de óptima asimilación digestiva. Muy valiosa para acompañar un sistema de defensas estable con el paso de los años.",
+    "ctaHint": "Comprobar formato anual",
+    "amazonUrl": "PENDIENTE_URL_ZINC",
+    "asin": "PENDIENTE_ZINC",
+    "image": "https://images.unsplash.com/photo-1592652136005-950c400de932?q=80&w=400&fit=crop",
+    "evidenceLevel": "Alta"
+  },
+  {
+    "slug": "vitamina-b12-metilcobalamina",
+    "name": "Vitamina B12 Sublingual Activa",
+    "category": "corazón",
+    "goalTags": [
+      "memoria",
+      "corazón",
+      "energía"
+    ],
+    "format": "Comprimidos Sublinguales",
+    "dose": "1000mcg",
+    "capsules": 90,
+    "price": "16.80€",
+    "rating": 4.9,
+    "reviewCount": 3200,
+    "badge": "Claridad Mental",
+    "shortDescription": "Forma biológicamente activa que salta la digestión gástrica gracias al formato sublingual. Indicada para mantener niveles estables de energía celular.",
+    "ctaHint": "Ver formato sublingual",
+    "amazonUrl": "PENDIENTE_URL_B12",
+    "asin": "PENDIENTE_B12",
+    "image": "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?q=80&w=400&fit=crop",
+    "evidenceLevel": "Alta"
   }
 ]
