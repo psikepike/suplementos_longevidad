@@ -386,10 +386,18 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
           <h2 className="text-xl md:text-2xl font-serif font-bold text-[#1F3A5F] mb-4 text-center md:text-left">Otras guías recomendadas</h2>
           <p className="text-[#666666] mb-8 text-sm md:text-base text-center md:text-left">Explora nuestros análisis sobre otros compuestos respaldados por la evidencia.</p>
           <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-             {slug !== 'omega-3' && <Link href="/suplementos/omega-3" className="bg-white border border-[#E5E2DA] text-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Omega 3 (EPA/DHA)</Link>}
+             {slug === 'magnesio' && <Link href="/suplementos/melatonina" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Magnesio + Melatonina</Link>}
+             {slug === 'colageno' && <Link href="/suplementos/curcumina" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Sinergia Inflamación (Curcumina)</Link>}
+             {slug === 'omega-3' && <Link href="/suplementos/curcumina" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Sinergia Curcumina</Link>}
+             {slug === 'creatina-mayores' && <Link href="/suplementos/proteina-suero" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Base Sarcopenia (Aislado Suero)</Link>}
+             {slug === 'melatonina' && <Link href="/suplementos/magnesio" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Magnesio Clave</Link>}
+             {slug === 'curcumina' && <Link href="/suplementos/colageno" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Sinergia Articular (Colágeno)</Link>}
+             {slug === 'proteina-suero' && <Link href="/suplementos/creatina-mayores" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Combo Mayores 50 (Creatina)</Link>}
+
+             {slug !== 'omega-3' && slug !== 'curcumina' && <Link href="/suplementos/omega-3" className="bg-white border border-[#E5E2DA] text-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Omega 3 (EPA/DHA)</Link>}
              {slug !== 'q10' && <Link href="/suplementos/q10" className="bg-white border border-[#E5E2DA] text-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Coenzima Q10</Link>}
-             {slug !== 'creatina-mayores' && <Link href="/suplementos/creatina-mayores" className="bg-white border border-[#E5E2DA] text-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Creatina 50+</Link>}
-             {slug !== 'magnesio' && <Link href="/suplementos/magnesio" className="bg-white border border-[#E5E2DA] text-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Magnesio Clave</Link>}
+             {slug !== 'creatina-mayores' && slug !== 'proteina-suero' && <Link href="/suplementos/creatina-mayores" className="bg-white border border-[#E5E2DA] text-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Creatina 50+</Link>}
+             {slug !== 'magnesio' && slug !== 'melatonina' && <Link href="/suplementos/magnesio" className="bg-white border border-[#E5E2DA] text-[#1F3A5F] text-sm font-bold px-5 py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Magnesio Clave</Link>}
           </div>
         </section>
 

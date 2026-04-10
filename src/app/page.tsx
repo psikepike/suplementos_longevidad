@@ -203,8 +203,8 @@ export default function Home() {
             <Link href="/suplementos/magnesio" className="text-[#1F3A5F] hover:text-[#1F3A5F] bg-white hover:bg-[#F7F6F2] border border-[#E5E2DA] px-6 py-3 rounded-xl font-medium transition-colors shadow-sm">Magnesio Citrato</Link>
             <Link href="/suplementos/omega-3" className="text-[#1F3A5F] hover:text-[#1F3A5F] bg-white hover:bg-[#F7F6F2] border border-[#E5E2DA] px-6 py-3 rounded-xl font-medium transition-colors shadow-sm">Omega 3 y EPA/DHA</Link>
             <Link href="/suplementos/creatina-mayores" className="text-[#1F3A5F] hover:text-[#1F3A5F] bg-white hover:bg-[#F7F6F2] border border-[#E5E2DA] px-6 py-3 rounded-xl font-medium transition-colors shadow-sm">Creatina 50+</Link>
-            <Link href="/suplementos/q10" className="text-[#1F3A5F] hover:text-[#1F3A5F] bg-white hover:bg-[#F7F6F2] border border-[#E5E2DA] px-6 py-3 rounded-xl font-medium transition-colors shadow-sm">Coenzima Q10</Link>
-            <Link href="/articulos/mejor-suplemento-memoria-mayores" className="text-[#1F3A5F] hover:text-[#1F3A5F] bg-white hover:bg-[#F7F6F2] border border-[#E5E2DA] px-6 py-3 rounded-xl font-medium transition-colors shadow-sm">Memoria +50</Link>
+            <Link href="/suplementos/melatonina" className="text-[#1F3A5F] hover:text-[#1F3A5F] bg-white hover:bg-[#F7F6F2] border border-[#E5E2DA] px-6 py-3 rounded-xl font-medium transition-colors shadow-sm">Melatonina Retard</Link>
+            <Link href="/suplementos/proteina-suero" className="text-[#1F3A5F] hover:text-[#1F3A5F] bg-white hover:bg-[#F7F6F2] border border-[#E5E2DA] px-6 py-3 rounded-xl font-medium transition-colors shadow-sm">Aislado WPI</Link>
           </div>
         </div>
       </section>
