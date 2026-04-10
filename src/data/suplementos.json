@@ -157,5 +157,74 @@
         "answer": "El cuerpo metaboliza las moléculas a aminoácidos básicos, sí, pero su ingesta empuja altísimas concentraciones exclusivas de Glicina e Hidroxiprolina estimulando los fibroblastos diana."
       }
     ]
+  },
+  {
+    "slug": "curcumina",
+    "name": "Curcumina Liposomada",
+    "categorySlug": "articulaciones",
+    "shortDescription": "Fitoquímico extraído de la cúrcuma con potentes propiedades vinculadas a la modulación de la inflamación crónica sistémica.",
+    "evidenceLevel": "Media",
+    "whatIsIt": "La curcumina es el principio activo principal de la raíz de la Cúrcuma longa. Es un polifenol responsable del color amarillo intenso y de sus efectos biológicos.",
+    "whatIsItUsedFor": "Comúnmente empleada para apoyar el balance inflamatorio, modular molestias crónicas osteoarticulares y como antioxidante natural.",
+    "evidence": "Amplia literatura apoya sus beneficios en el control del estrés oxidativo y su papel de mitigación inflamatoria, aunque su gran reto clínico es su bajísima absorción natural.",
+    "standardDose": "500-1000 mg diarios, dependiendo de la vía de aumento de biodisponibilidad elegida (liposomas, fitosomas o micelas).",
+    "sideEffects": "Generalmente muy segura. Ocasionalmente molestias gastrointestinales leves si se toma sin alimentos.",
+    "whoShouldAvoid": "Personas con obstrucciones biliares o que consumen altas dosis de fármacos anticoagulantes/antiplaquetarios dado su ligero efecto fluidificante.",
+    "bestFormats": "Extractos patentados diseñados para absorción (Liposomada, Fitosomada como Meriva® o NovaSOL®). Evitar el polvo común de especia.",
+    "recommendedAsins": [
+      "PENDIENTE_CURCUMA"
+    ],
+    "faq": [
+      {
+        "question": "¿Sirve la especia de cúrcuma de supermercado?",
+        "answer": "No a nivel terapéutico. La cúrcuma en polvo solo contiene entre un urgencia 2-5% de curcumina y apenas se absorbe en el intestino."
+      }
+    ]
+  },
+  {
+    "slug": "melatonina",
+    "name": "Melatonina",
+    "categorySlug": "sueno",
+    "shortDescription": "Hormona clave en la regulación del ritmo circadiano. Empleada universalmente para reajustar los ciclos de sueño y acortar el tiempo de inducción.",
+    "evidenceLevel": "Alta",
+    "whatIsIt": "Una hormona sintetizada naturalmente por la glándula pineal en el cerebro, cuya secreción se inhibe por la luz azul y aumenta en la oscuridad profunda.",
+    "whatIsItUsedFor": "Indicada principalmente para compensar desfases horarios (jet lag), trabajos por turnos, y en edades donde la producción endógena sufre fuertes caídas fisiológicas.",
+    "evidence": "Altísimo consenso en que modula drásticamente el inicio del sueño en la fase de latencia, si bien su eficacia para mantener un sueño ininterrumpido depende de formatos de liberación prolongada.",
+    "standardDose": "De 1 a 3 miligramos, tomados aproximadamente de 30 a 60 minutos antes del descanso nocturno deseado.",
+    "sideEffects": "Pesadez matutina (resaca de sueño) si la dosis es excesiva o se duerme un número insuficiente de horas.",
+    "whoShouldAvoid": "Pacientes con procesos inmunológicos complejos (al ser inmunomoduladora) o sin supervisión médica si se están trantando cuadros psiquiátricos depresivos.",
+    "bestFormats": "Formulaciones sublinguales o líquidas para efectos ultrarrápidos, y cápsulas retard para problemas de despertares de madrugada.",
+    "recommendedAsins": [
+      "PENDIENTE_MELATONINA"
+    ],
+    "faq": [
+      {
+        "question": "¿Causa dependencia o frena la propia producción del cuerpo?",
+        "answer": "Hasta la fecha, los estudios clínicos no revelan dependencia física severa ni que bloquee la regeneración natural de la glándula pineal una vez discontinuada."
+      }
+    ]
+  },
+  {
+    "slug": "proteina-suero",
+    "name": "Proteína Aislada de Suero",
+    "categorySlug": "musculo-y-sarcopenia",
+    "shortDescription": "El macronutriente esencial para la recuperación tisular. Crítico en edades maduras para evadir la cascada de la fragilidad muscular (sarcopenia).",
+    "evidenceLevel": "Alta",
+    "whatIsIt": "Fracción líquida de la coagulación de la leche, purificada para eliminar grasas y lactosa. Exhibe el máximo valor biológico orgánico conocido en biodisponibilidad de aminoácidos esenciales.",
+    "whatIsItUsedFor": "Facilitar un estímulo sintético en los tejidos musculares dañados o sin suficiente material para reconstituirse tras ejercicio o por la edad.",
+    "evidence": "Es el patrón oro absoluto en la ciencia deportiva y geriátrica para garantizar las métricas de umbral de Leucina necesarias para disparar la ruta celular mTOR y forzar retención de músculo.",
+    "standardDose": "De 25 a 30 gramos netos de proteína por toma, adaptado diariamente al sumatorio requerido según peso y desgaste metabólico.",
+    "sideEffects": "Sensación de empacho o gases si quedan trazas de lactosa en personas con alta intolerancia (motivo por el que se indica perfil aislado, no concentrado).",
+    "whoShouldAvoid": "Enfermos crónicos con descompensaciones o fracaso renal diagnosticado y limitación severa de solutos proteicos en riñón.",
+    "bestFormats": "Whey Protein Isolate (Aislado de Suero WPI) neutro o endulzado limbiamente por su práctica eliminación funcional de lactosa.",
+    "recommendedAsins": [
+      "PENDIENTE_PROTEINA"
+    ],
+    "faq": [
+      {
+        "question": "¿La proteína daña los riñones en personas sanas?",
+        "answer": "No. La ficción de que destruye riñones sanos es un mito superado médicamente hace décadas. Solo un riñón previamente enfermo requiere la pauta contraria."
+      }
+    ]
   }
 ]

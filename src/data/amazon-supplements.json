@@ -136,5 +136,74 @@
     "asin": "B0B4BBND37",
     "image": "https://images.unsplash.com/photo-1594824432166-e822f771aece?q=80&w=400&fit=crop",
     "evidenceLevel": "Media"
+  },
+  {
+    "slug": "curcumina-liposomada-alta",
+    "name": "Curcumina Liposomada Alta Absorción",
+    "category": "articulaciones",
+    "goalTags": [
+      "articulaciones",
+      "inflamación",
+      "longevidad"
+    ],
+    "format": "Cápsulas Liposomales",
+    "dose": "500mg de complejo patentado",
+    "capsules": 60,
+    "price": "24.90€",
+    "rating": 4.6,
+    "reviewCount": 1150,
+    "badge": "Top Inflamación",
+    "shortDescription": "Fórmula liposomal envolvente que elude la rápida degradación hepática y asegura su transporte intacto. Ideal contra el dolor crónico articular al envejecer.",
+    "ctaHint": "Comprobar formato bimensual",
+    "amazonUrl": "PENDIENTE_URL_CURCUMA",
+    "asin": "PENDIENTE_CURCUMA",
+    "image": "https://images.unsplash.com/photo-1615486511484-92e172a2fd9a?q=80&w=400&fit=crop",
+    "evidenceLevel": "Media"
+  },
+  {
+    "slug": "melatonina-retard",
+    "name": "Melatonina de Liberación Sostenida",
+    "category": "sueño",
+    "goalTags": [
+      "sueño",
+      "nerviosismo",
+      "descanso"
+    ],
+    "format": "Comprimidos Retard",
+    "dose": "1.9mg",
+    "capsules": 90,
+    "price": "14.50€",
+    "rating": 4.8,
+    "reviewCount": 3500,
+    "badge": "Arquitectura del Sueño",
+    "shortDescription": "Compuesto microencapsulado para soltar las fracciones hormonales pico a pico. Elimina la interrupción de fase y despertares de madrugada típicos a partir de los 50 años.",
+    "ctaHint": "Ver formato cápsula retard",
+    "amazonUrl": "PENDIENTE_URL_MELATONINA",
+    "asin": "PENDIENTE_MELATONINA",
+    "image": "https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?q=80&w=400&fit=crop",
+    "evidenceLevel": "Alta"
+  },
+  {
+    "slug": "aislado-proteina-neutra",
+    "name": "Aislado de Proteína (WPI) Sabor Neutro",
+    "category": "músculo-y-sarcopenia",
+    "goalTags": [
+      "sarcopenia",
+      "músculo",
+      "longevidad"
+    ],
+    "format": "Polvo Microfiltrado",
+    "dose": "1kg (33 tomas puras)",
+    "capsules": 0,
+    "price": "39.90€",
+    "rating": 4.9,
+    "reviewCount": 12500,
+    "badge": "Top Sarcopenia",
+    "shortDescription": "Concentración supermasiva biológicamente biodisponible sin metales pesados, aditivación láctea o azúcares residuales. Tu primera barrera ortopédica contra la fragilidad ligada a la edad.",
+    "ctaHint": "Mirar envase ahorro 1kg",
+    "amazonUrl": "PENDIENTE_URL_PROTEINA",
+    "asin": "PENDIENTE_PROTEINA",
+    "image": "https://images.unsplash.com/photo-1526403613009-43c2da9eff2f?q=80&w=400&fit=crop",
+    "evidenceLevel": "Alta"
   }
 ]
