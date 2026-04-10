@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#F7F6F2]">
       
       {/* Hero Section */}
-      <section className="pt-10 pb-16 md:pt-16 md:pb-24 px-6 lg:px-8 max-w-6xl mx-auto relative overflow-hidden flex flex-col md:flex-row items-center gap-10">
-        <div className="max-w-3xl relative z-10 flex-1">
+      <section className="bg-[#F7F6F2] pt-8 pb-16 md:pt-16 md:pb-24 px-6 lg:px-8 max-w-6xl mx-auto relative overflow-hidden flex flex-col md:flex-row items-center gap-8 md:gap-10">
+        <div className="max-w-3xl relative z-10 flex-1 order-last md:order-first">
           <h1 className="font-serif text-[32px] sm:text-4xl md:text-5xl lg:text-[54px] font-bold text-[#1F3A5F] tracking-tight leading-[1.2] lg:leading-[1.12] mb-6">
             Los suplementos más utilizados para envejecer con salud
           </h1>
@@ -24,21 +24,21 @@ export default function Home() {
             Guías claras y prudentes sobre suplementos, hábitos y comparativas construidas expresamente para el bienestar a partir de los 50 años.
           </p>
           <div className="flex flex-col items-start gap-4">
-            <div className="flex flex-wrap gap-4 items-center">
-              <Link href="#categorias" className="bg-[#1F3A5F] text-white px-8 py-3.5 rounded-xl font-bold hover:bg-[#6B8F71] transition-colors shadow-sm text-center">
+            <div className="flex flex-wrap gap-4 items-center w-full sm:w-auto">
+              <Link href="#categorias" className="bg-[#1F3A5F] text-white w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold hover:bg-[#6B8F71] transition-colors shadow-sm text-center">
                 Ver suplementos
               </Link>
-              <button className="bg-transparent border border-[#E5E2DA] text-[#1F3A5F] px-8 py-3.5 rounded-xl font-bold hover:bg-[#F7F6F2] hover:border-[#6B8F71] transition-all text-center">
+              <button className="bg-transparent border border-[#E5E2DA] w-full sm:w-auto text-[#1F3A5F] px-8 py-3.5 rounded-xl font-bold hover:bg-[#F7F6F2] hover:border-[#6B8F71] transition-all text-center">
                 Leer guía gratuita
               </button>
             </div>
-            <p className="text-sm text-[#666666] font-medium flex items-center gap-2 ml-1">
+            <p className="text-sm text-[#666666] font-medium flex items-center gap-2 ml-1 mt-2 md:mt-0">
                <span className="w-1.5 h-1.5 rounded-full bg-[#6B8F71]"></span>
                Sin promesas milagro ni lenguaje agresivo
             </p>
           </div>
           
-          <div className="flex flex-wrap gap-x-6 gap-y-3 mt-10 pt-6 border-t border-[#E5E2DA]/60">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-x-6 gap-y-3 mt-10 pt-6 border-t border-[#E5E2DA]/60">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#6B8F71]"></span>
               <span className="text-[#666666] text-xs font-bold tracking-wider uppercase">Información Prudente</span>
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="hidden md:block w-full flex-1 relative h-[400px] rounded-2xl overflow-hidden shadow-lg border border-[#E5E2DA]">
+        <div className="w-full md:flex-1 relative h-[250px] md:h-[400px] rounded-2xl overflow-hidden shadow-lg border border-[#E5E2DA] order-first md:order-last">
           <Image src="/images/home/hero/hero-supplements.jpeg" alt="Suplementos para longevidad" fill className="object-cover" priority />
         </div>
       </section>
