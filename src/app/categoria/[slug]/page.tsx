@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     alternates: { canonical: `/categoria/${slug}` },
     openGraph: {
       type: "website",
-      url: `https://suplementoslongevidad.com/categoria/${slug}`,
+      url: `https://www.suplementoslongevidad.com/categoria/${slug}`,
       title: `${categoria.name} | Suplementos`,
       description: categoria.description,
     },
@@ -50,9 +50,9 @@ export default async function CategoriaPage({ params }: { params: { slug: string
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://suplementoslongevidad.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Categorías", "item": "https://suplementoslongevidad.com/categoria"},
-      {"@type": "ListItem", "position": 3, "name": categoria.name, "item": `https://suplementoslongevidad.com/categoria/${slug}`}
+      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.suplementoslongevidad.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Categorías", "item": "https://www.suplementoslongevidad.com/categoria"},
+      {"@type": "ListItem", "position": 3, "name": categoria.name, "item": `https://www.suplementoslongevidad.com/categoria/${slug}`}
     ]
   };
 

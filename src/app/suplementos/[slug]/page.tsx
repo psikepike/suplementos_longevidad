@@ -21,10 +21,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: `Guía sobre ${suplemento.name}: Evidencia y Dosis`,
     description: suplemento.shortDescription,
-    alternates: { canonical: `https://suplementoslongevidad.com/suplementos/${slug}` },
+    alternates: { canonical: `https://www.suplementoslongevidad.com/suplementos/${slug}` },
     openGraph: {
       type: "article",
-      url: `https://suplementoslongevidad.com/suplementos/${slug}`,
+      url: `https://www.suplementoslongevidad.com/suplementos/${slug}`,
       title: `Guía sobre ${suplemento.name}`,
       description: suplemento.shortDescription,
     },
@@ -57,9 +57,9 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://suplementoslongevidad.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Categorías", "item": `https://suplementoslongevidad.com/categoria/${suplemento.categorySlug}`},
-      {"@type": "ListItem", "position": 3, "name": suplemento.name, "item": `https://suplementoslongevidad.com/suplementos/${slug}`}
+      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.suplementoslongevidad.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Categorías", "item": `https://www.suplementoslongevidad.com/categoria/${suplemento.categorySlug}`},
+      {"@type": "ListItem", "position": 3, "name": suplemento.name, "item": `https://www.suplementoslongevidad.com/suplementos/${slug}`}
     ]
   };
 

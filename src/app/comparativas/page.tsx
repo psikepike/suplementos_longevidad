@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Comparativas de Suplementos',
   description: 'Análisis detallados y comparativas imparciales entre distintos formatos y marcas de suplementos respaldados por la ciencia.',
-  alternates: { canonical: 'https://suplementoslongevidad.com/comparativas' }
+  alternates: { canonical: 'https://www.suplementoslongevidad.com/comparativas' }
 };
 
 export default function ComparativasIndexPage() {

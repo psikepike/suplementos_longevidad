@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     alternates: { canonical: `/articulos/${slug}` },
     openGraph: {
       type: "article",
-      url: `https://suplementoslongevidad.com/articulos/${slug}`,
+      url: `https://www.suplementoslongevidad.com/articulos/${slug}`,
       title: articulo.title,
       description: articulo.excerpt,
     },
@@ -46,9 +46,9 @@ export default async function ArticuloPage({ params }: { params: { slug: string 
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://suplementoslongevidad.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Artículos", "item": "https://suplementoslongevidad.com/articulos"},
-      {"@type": "ListItem", "position": 3, "name": articulo.title, "item": `https://suplementoslongevidad.com/articulos/${slug}`}
+      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.suplementoslongevidad.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Artículos", "item": "https://www.suplementoslongevidad.com/articulos"},
+      {"@type": "ListItem", "position": 3, "name": articulo.title, "item": `https://www.suplementoslongevidad.com/articulos/${slug}`}
     ]
   };
 

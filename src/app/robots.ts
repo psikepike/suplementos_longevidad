@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/'],
     },
-    sitemap: 'https://suplementoslongevidad.com/sitemap.xml',
+    sitemap: 'https://www.suplementoslongevidad.com/sitemap.xml',
   };
 }

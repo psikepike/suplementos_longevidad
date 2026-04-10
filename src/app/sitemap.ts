@@ -3,7 +3,7 @@ import categorias from '@/data/categorias.json';
 import suplementos from '@/data/suplementos.json';
 import articulos from '@/data/articulos.json';
 
-const url = 'https://suplementoslongevidad.com';
+const url = 'https://www.suplementoslongevidad.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [
