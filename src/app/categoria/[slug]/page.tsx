@@ -5,6 +5,7 @@ import articulosData from '@/data/articulos.json';
 import librosData from '@/data/books-longevity.json';
 import Link from 'next/link';
 import BookCard from '@/components/BookCard';
+import Image from 'next/image';
 
 export async function generateStaticParams() {
   return categorias.map((c) => ({ slug: c.slug }));
@@ -71,6 +72,13 @@ export default async function CategoriaPage({ params }: { params: { slug: string
       <section className="mb-16">
         <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#1F3A5F] tracking-tight mb-4">{categoria.name}</h1>
         <p className="text-xl text-[#6B8F71] font-serif max-w-3xl">{categoria.description}</p>
+        
+        {/* IMAGEN EDITORIAL */}
+        {Boolean('editorialImage' in categoria && (categoria as any).editorialImage) && (
+          <div className="relative w-full h-[200px] sm:h-64 md:h-80 mt-8 rounded-xl md:rounded-2xl overflow-hidden shadow-sm border border-[#E5E2DA]">
+            <Image src={String((categoria as any).editorialImage)} alt={`Cabecera de ${categoria.name}`} fill className="object-cover" priority />
+          </div>
+        )}
       </section>
 
       {/* Grid suplementos */}

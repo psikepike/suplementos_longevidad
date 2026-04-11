@@ -84,9 +84,9 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
           <h1 className="font-serif text-3xl md:text-5xl font-bold text-[#1F3A5F] tracking-tight mb-4 leading-tight">{suplemento.name}</h1>
           <p className="text-lg md:text-2xl text-[#6B8F71] font-serif italic max-w-2xl mb-8 leading-snug">{suplemento.shortDescription}</p>
           
-          {slug === 'magnesio' && (
+          {'editorialImage' in suplemento && suplemento.editorialImage && (
             <div className="relative w-full h-[200px] sm:h-64 md:h-96 rounded-xl md:rounded-2xl overflow-hidden shadow-sm border border-[#E5E2DA]">
-              <Image src="/images/supplements/magnesio/hero.jpeg" alt={`Hero banner de ${suplemento.name}`} fill className="object-cover" priority />
+              <Image src={String(suplemento.editorialImage)} alt={`Hero banner de ${suplemento.name}`} fill className="object-cover" priority />
             </div>
           )}
         </header>
