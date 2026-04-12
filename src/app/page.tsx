@@ -15,46 +15,46 @@ export default function Home() {
     <div className="min-h-screen bg-[#F7F6F2]">
       
       {/* Hero Section */}
-      <section className="bg-[#F7F6F2] pt-8 pb-16 md:pt-16 md:pb-24 px-6 lg:px-8 max-w-6xl mx-auto relative overflow-hidden flex flex-col md:flex-row items-center gap-8 md:gap-10">
-        <div className="max-w-3xl relative z-10 flex-1 order-last md:order-first">
-          <h1 className="font-serif text-[32px] sm:text-4xl md:text-5xl lg:text-[54px] font-bold text-[#1F3A5F] tracking-tight leading-[1.2] lg:leading-[1.12] mb-6">
+      <section className="bg-[#F7F6F2] pt-4 pb-10 md:pt-16 md:pb-24 px-5 md:px-8 max-w-6xl mx-auto relative overflow-hidden flex flex-col md:flex-row items-center gap-5 md:gap-10">
+        <div className="max-w-3xl relative z-10 flex-1 order-last md:order-first w-full">
+          <h1 className="font-serif text-[28px] sm:text-4xl md:text-5xl lg:text-[54px] font-bold text-[#1F3A5F] tracking-tight leading-[1.15] lg:leading-[1.12] mb-3 md:mb-6">
             Los suplementos más utilizados para envejecer con salud
           </h1>
-          <p className="text-lg md:text-xl text-[#666666] mb-8 font-serif italic max-w-2xl leading-relaxed">
+          <p className="text-[17px] md:text-xl text-[#666666] mb-5 md:mb-8 font-serif italic max-w-2xl leading-relaxed">
             Guías claras y prudentes sobre suplementos, hábitos y comparativas construidas expresamente para el bienestar a partir de los 50 años.
           </p>
-          <div className="flex flex-col items-start gap-4">
-            <div className="flex flex-wrap gap-4 items-center w-full sm:w-auto">
-              <Link href="#categorias" className="bg-[#1F3A5F] text-white w-full sm:w-auto px-8 py-3.5 rounded-xl font-bold hover:bg-[#6B8F71] transition-colors shadow-sm text-center">
+          <div className="flex flex-col items-start gap-3 md:gap-4">
+            <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 w-full sm:w-auto">
+              <Link href="#categorias" className="bg-[#1F3A5F] text-white w-full sm:w-auto px-6 md:px-8 py-3 md:py-3.5 rounded-xl font-[600] md:font-bold hover:bg-[#6B8F71] transition-colors shadow-sm text-center">
                 Ver suplementos
               </Link>
-              <button className="bg-transparent border border-[#E5E2DA] w-full sm:w-auto text-[#1F3A5F] px-8 py-3.5 rounded-xl font-bold hover:bg-[#F7F6F2] hover:border-[#6B8F71] transition-all text-center">
+              <button className="bg-transparent border border-[#E5E2DA] w-full sm:w-auto text-[#1F3A5F] px-6 md:px-8 py-3 md:py-3.5 rounded-xl font-[600] md:font-bold hover:bg-[#F7F6F2] hover:border-[#6B8F71] transition-all text-center">
                 Leer guía gratuita
               </button>
             </div>
-            <p className="text-sm text-[#666666] font-medium flex items-center gap-2 ml-1 mt-2 md:mt-0">
+            <p className="text-[13px] md:text-sm text-[#666666] font-medium flex items-center gap-2 ml-0.5 md:ml-1 mt-1 md:mt-0">
                <span className="w-1.5 h-1.5 rounded-full bg-[#6B8F71]"></span>
                Sin promesas milagro ni lenguaje agresivo
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-x-6 gap-y-3 mt-10 pt-6 border-t border-[#E5E2DA]/60">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#6B8F71]"></span>
-              <span className="text-[#666666] text-xs font-bold tracking-wider uppercase">Información Prudente</span>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 mt-6 md:mt-10 pt-4 md:pt-6 border-t border-[#E5E2DA]/60">
+            <div className="flex items-center gap-1.5 md:gap-2">
+              <span className="w-1.5 md:w-2 h-1.5 md:h-2 rounded-full bg-[#6B8F71]"></span>
+              <span className="text-[#666666] text-[10px] md:text-xs font-bold tracking-wider uppercase">Información Prudente</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#6B8F71]"></span>
-              <span className="text-[#666666] text-xs font-bold tracking-wider uppercase">Enfoque clínico base</span>
+            <div className="flex items-center gap-1.5 md:gap-2">
+              <span className="w-1.5 md:w-2 h-1.5 md:h-2 rounded-full bg-[#6B8F71]"></span>
+              <span className="text-[#666666] text-[10px] md:text-xs font-bold tracking-wider uppercase">Enfoque clínico base</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#1F3A5F]"></span>
-              <span className="text-[#666666] text-xs font-bold tracking-wider uppercase">Evidencia Actualizada</span>
+            <div className="flex items-center gap-1.5 md:gap-2">
+              <span className="w-1.5 md:w-2 h-1.5 md:h-2 rounded-full bg-[#1F3A5F]"></span>
+              <span className="text-[#666666] text-[10px] md:text-xs font-bold tracking-wider uppercase">Evidencia Actualizada</span>
             </div>
           </div>
         </div>
         
-        <div className="w-full md:flex-1 relative h-[250px] md:h-[400px] rounded-2xl overflow-hidden shadow-lg border border-[#E5E2DA] order-first md:order-last">
+        <div className="w-full md:flex-1 relative h-[140px] sm:h-[180px] md:h-[400px] rounded-xl md:rounded-2xl overflow-hidden shadow-sm md:shadow-lg border border-[#E5E2DA] order-first md:order-last">
           <Image src="/images/home/hero/hero-supplements.jpeg" alt="Suplementos para longevidad" fill className="object-cover" priority />
         </div>
       </section>
@@ -70,10 +70,37 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categorias.map(cat => {
               const subItems = suplementos.filter(s => s.categorySlug === cat.slug).slice(0, 3).map(s => s.name).join(', ');
+              
+              // Helper resolver para SVG minimalista por categoría (stroke fino, maduro y neutro)
+              const renderIcon = (slug: string) => {
+                const svgProps = { className: "w-6 h-6 text-[#1F3A5F] opacity-70 group-hover:text-[#6B8F71] transition-colors shrink-0", fill: "none", stroke: "currentColor", strokeWidth: 1.5, viewBox: "0 0 24 24" };
+                switch (slug) {
+                  case 'energia-y-fatiga':
+                    return <svg {...svgProps}><path strokeLinecap="round" strokeLinejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg>;
+                  case 'memoria-y-cerebro':
+                    return <svg {...svgProps}><path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.829 1.508-2.316a7.5 7.5 0 1 0-7.516 0c.85.487 1.508 1.333 1.508 2.316v.192" /></svg>;
+                  case 'articulaciones':
+                    return <svg {...svgProps}><path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" /></svg>;
+                  case 'sueno':
+                    return <svg {...svgProps}><path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" /></svg>;
+                  case 'corazon-y-circulacion':
+                    return <svg {...svgProps}><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>;
+                  case 'longevidad':
+                    return <svg {...svgProps}><path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>;
+                  default:
+                    return <svg {...svgProps}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" /></svg>;
+                }
+              };
+
               return (
                 <Link key={cat.slug} href={`/categoria/${cat.slug}`} className="bg-[#F7F6F2] hover:bg-[#E5E2DA]/10 hover:border-[#6B8F71]/30 border border-[#E5E2DA] p-6 md:p-8 rounded-2xl transition-all group flex flex-col justify-between shadow-sm hover:shadow-md">
                   <div className="mb-6">
-                    <h4 className="font-serif text-2xl font-bold text-[#1F3A5F] mb-3 group-hover:text-[#6B8F71] transition-colors">{cat.name}</h4>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-full bg-[#E5E2DA]/50 flex items-center justify-center border border-[#E5E2DA] group-hover:border-[#6B8F71]/20 group-hover:bg-[#E5E2DA]/80 transition-colors">
+                        {renderIcon(cat.slug)}
+                      </div>
+                      <h4 className="font-serif text-2xl font-bold text-[#1F3A5F] group-hover:text-[#6B8F71] transition-colors">{cat.name}</h4>
+                    </div>
                     <p className="text-[#666666] text-sm leading-relaxed mb-4 line-clamp-2">{cat.description}</p>
                     {subItems && (
                       <p className="text-[#2B2B2B] font-medium text-xs italic opacity-85 border-l-2 border-[#E5E2DA] group-hover:border-[#6B8F71]/40 pl-3 py-0.5 transition-colors">
