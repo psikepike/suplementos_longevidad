@@ -53,8 +53,8 @@ export default function SupplementIndexCard({ supplement }: { supplement: any })
               Dosis base: {supplement.standardDose.split(' ')[0]} mg
             </span>
             {(supplement.recommendedAsins || []).length > 0 && (
-              <span className="text-xs font-semibold text-[#1F3A5F] bg-[#4ade80]/10 border border-[#4ade80]/20 px-2 py-1 rounded flex items-center gap-1">
-                <span className="text-[#4ade80] text-[10px]">✓</span> {supplement.recommendedAsins.length} opc. aprobadas
+              <span className="text-xs font-semibold text-[#1F3A5F] bg-[#6B8F71]/10 border border-[#6B8F71]/20 px-2 py-1 rounded flex items-center gap-1">
+                <span className="text-[#6B8F71] text-[10px]">✓</span> {supplement.recommendedAsins.length} opc. aprobadas
               </span>
             )}
           </div>
