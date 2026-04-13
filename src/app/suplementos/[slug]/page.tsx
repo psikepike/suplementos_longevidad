@@ -96,17 +96,17 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
             <section className="bg-[#182C49] text-white p-6 rounded-xl md:rounded-2xl shadow-md border border-[#264166]">
               {/* OMITIENDO REPETICIÓN PARA BREVEDAD, SE MANTIENE BLOQUE RESUMIDO DE MAGNESIO */}
               <h2 className="text-lg md:text-xl font-serif font-bold mb-4 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-[#4ade80]/20 flex items-center justify-center text-[#4ade80] text-xs">✓</span>
+                <span className="w-6 h-6 rounded-full bg-[#6B8F71]/10 border border-[#6B8F71]/20 flex items-center justify-center text-[#6B8F71] text-xs">✓</span>
                 Formatos recomendados
               </h2>
               <div className="flex flex-col gap-2 text-sm">
-                <div className="bg-[#162944] p-3 md:px-5 rounded-lg border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <span className="text-white/90">Descanso nocturno</span>
-                  <span className="font-bold text-[#4ade80]">Magnesio Bisglicinato</span>
+                <div className="bg-[#F7F6F2] p-3 md:px-5 rounded-lg border border-[#E5E2DA] flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                  <span className="text-[#666666]">Descanso nocturno</span>
+                  <span className="font-bold text-[#1F3A5F]">Magnesio Bisglicinato</span>
                 </div>
-                <div className="bg-[#162944] p-3 md:px-5 rounded-lg border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <span className="text-white/90">Tránsito intestinal</span>
-                  <span className="font-bold text-[#4ade80]">Magnesio Citrato</span>
+                <div className="bg-[#F7F6F2] p-3 md:px-5 rounded-lg border border-[#E5E2DA] flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                  <span className="text-[#666666]">Tránsito intestinal</span>
+                  <span className="font-bold text-[#1F3A5F]">Magnesio Citrato</span>
                 </div>
               </div>
             </section>
@@ -153,7 +153,13 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
                   
                   <div className="flex flex-col gap-6">
                     {validProducts.length === 0 ? (
-                      <p className="text-[#666666] italic bg-[#F7F6F2] p-6 rounded-xl border border-[#E5E2DA] text-sm">No hay productos aprobados en este momento. Estamos revisando el mercado.</p>
+                      <div className="bg-[#F7F6F2] p-8 rounded-xl border border-[#E5E2DA] flex flex-col items-center text-center">
+                        <div className="w-12 h-12 mb-4 bg-white rounded-full border border-[#E5E2DA] flex items-center justify-center">
+                          <svg className="w-6 h-6 text-[#1F3A5F]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                        </div>
+                        <h3 className="font-serif font-bold text-lg text-[#1F3A5F] mb-2">Evaluación en progreso</h3>
+                        <p className="text-[#666666] text-sm max-w-md">No hemos aprobado productos para esta categoría todavía. Nuestro equipo editorial sigue revisando suplementos mercantiles que cumplan nuestro criterio clínico.</p>
+                      </div>
                     ) : (
                       validProducts.map((prod, idx: number) => {
                         if (!prod) return null;
@@ -221,7 +227,7 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
 
           <section className="text-sm text-[#666666] bg-[#1F3A5F]/5 p-5 md:p-6 rounded-xl border border-[#1F3A5F]/10">
             <h3 className="font-bold text-[#1F3A5F] mb-2 uppercase tracking-wide text-xs flex items-center gap-2">
-              <span className="text-rose-500">⚠</span> Efectos Secundarios y Precaución
+              <svg className="w-4 h-4 text-[#1F3A5F]/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg> Efectos Secundarios y Precaución
             </h3>
             <p className="mb-2"><strong className="text-[#2B2B2B]">Efectos:</strong> {suplemento.sideEffects}</p>
             <p><strong className="text-[#2B2B2B]">Evitar en caso de:</strong> {suplemento.whoShouldAvoid}</p>
@@ -239,15 +245,15 @@ export default async function SuplementoPage({ params }: { params: { slug: strin
             <h2 className="text-xl md:text-2xl font-serif font-bold text-[#1F3A5F] mb-4 text-center md:text-left">Otras guías recomendadas</h2>
             <p className="text-[#666666] mb-6 md:mb-8 text-sm md:text-base text-center md:text-left">Explora nuestros análisis sobre otros compuestos respaldados por la evidencia.</p>
             <div className="flex flex-wrap gap-2.5 md:gap-3 justify-center md:justify-start">
-               {slug === 'magnesio' && <Link href="/suplementos/melatonina" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Magnesio + Melatonina</Link>}
-               {slug === 'colageno' && <Link href="/suplementos/curcumina" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Sinergia Inflamación (Curcumina)</Link>}
-               {slug === 'omega-3' && <Link href="/suplementos/curcumina" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Sinergia Curcumina</Link>}
-               {slug === 'creatina-mayores' && <Link href="/suplementos/proteina-suero" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Base Sarcopenia (Aislado Suero)</Link>}
-               {slug === 'melatonina' && <Link href="/suplementos/magnesio" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Magnesio Clave</Link>}
-               {slug === 'curcumina' && <Link href="/suplementos/colageno" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Sinergia Articular (Colágeno)</Link>}
-               {slug === 'proteina-suero' && <Link href="/suplementos/creatina-mayores" className="bg-[#1F3A5F] text-white border border-[#1F3A5F] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#6B8F71] hover:border-[#6B8F71] transition-colors shadow-sm">Combo Mayores 50 (Creatina)</Link>}
+               {slug === 'magnesio' && <Link href="/suplementos/melatonina" className="bg-white text-[#1F3A5F] border border-[#E5E2DA] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#F7F6F2] hover:border-[#6B8F71]/30 transition-colors shadow-sm">Magnesio + Melatonina</Link>}
+               {slug === 'colageno' && <Link href="/suplementos/curcumina" className="bg-white text-[#1F3A5F] border border-[#E5E2DA] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#F7F6F2] hover:border-[#6B8F71]/30 transition-colors shadow-sm">Sinergia Inflamación (Curcumina)</Link>}
+               {slug === 'omega-3' && <Link href="/suplementos/curcumina" className="bg-white text-[#1F3A5F] border border-[#E5E2DA] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#F7F6F2] hover:border-[#6B8F71]/30 transition-colors shadow-sm">Sinergia Curcumina</Link>}
+               {slug === 'creatina-mayores' && <Link href="/suplementos/proteina-suero" className="bg-white text-[#1F3A5F] border border-[#E5E2DA] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#F7F6F2] hover:border-[#6B8F71]/30 transition-colors shadow-sm">Base Sarcopenia (Aislado Suero)</Link>}
+               {slug === 'melatonina' && <Link href="/suplementos/magnesio" className="bg-white text-[#1F3A5F] border border-[#E5E2DA] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#F7F6F2] hover:border-[#6B8F71]/30 transition-colors shadow-sm">Magnesio Clave</Link>}
+               {slug === 'curcumina' && <Link href="/suplementos/colageno" className="bg-white text-[#1F3A5F] border border-[#E5E2DA] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#F7F6F2] hover:border-[#6B8F71]/30 transition-colors shadow-sm">Sinergia Articular (Colágeno)</Link>}
+               {slug === 'proteina-suero' && <Link href="/suplementos/creatina-mayores" className="bg-white text-[#1F3A5F] border border-[#E5E2DA] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#F7F6F2] hover:border-[#6B8F71]/30 transition-colors shadow-sm">Combo Mayores 50 (Creatina)</Link>}
 
-               {slug !== 'omega-3' && slug !== 'curcumina' && <Link href="/suplementos/omega-3" className="bg-[#F7F6F2] border border-[#E5E2DA] text-[#1F3A5F] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Omega 3 (EPA/DHA)</Link>}
+               {slug !== 'omega-3' && slug !== 'curcumina' && <Link href="/suplementos/omega-3" className="bg-white text-[#1F3A5F] border border-[#E5E2DA] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:bg-[#F7F6F2] hover:border-[#6B8F71]/30 transition-colors shadow-sm">Omega 3 (EPA/DHA)</Link>}
                {slug !== 'q10' && <Link href="/suplementos/q10" className="bg-[#F7F6F2] border border-[#E5E2DA] text-[#1F3A5F] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Coenzima Q10</Link>}
                {slug !== 'creatina-mayores' && slug !== 'proteina-suero' && <Link href="/suplementos/creatina-mayores" className="bg-[#F7F6F2] border border-[#E5E2DA] text-[#1F3A5F] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Creatina 50+</Link>}
                {slug !== 'magnesio' && slug !== 'melatonina' && <Link href="/suplementos/magnesio" className="bg-[#F7F6F2] border border-[#E5E2DA] text-[#1F3A5F] text-xs md:text-sm font-bold px-4 md:px-5 py-2.5 md:py-3 rounded-xl hover:border-[#6B8F71] transition-colors shadow-sm">Magnesio Clave</Link>}

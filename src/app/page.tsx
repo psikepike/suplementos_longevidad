@@ -127,10 +127,10 @@ export default function Home() {
            
           <div className="mb-10 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-              <h2 className="text-sm font-bold text-[#4ade80] tracking-widest uppercase mb-2">Visión global</h2>
+              <h2 className="text-sm font-bold text-white/70 tracking-widest uppercase mb-2">Visión global</h2>
               <h3 className="font-serif text-3xl md:text-4xl font-bold text-white max-w-2xl leading-tight">Mapeo Rápido de Suplementos</h3>
             </div>
-            <Link href="/suplementos" className="text-white hover:text-[#4ade80] border-b border-white/50 hover:border-[#4ade80] pb-1 transition-all md:mb-2 text-sm font-bold uppercase tracking-wider">
+            <Link href="/suplementos" className="text-white hover:text-white/80 border-b border-white/50 hover:border-white/80 pb-1 transition-all md:mb-2 text-sm font-bold uppercase tracking-wider">
               Ver catálogo completo
             </Link>
           </div>
@@ -151,7 +151,7 @@ export default function Home() {
                     <td className="py-5 px-6 font-serif font-bold text-lg text-white/95 whitespace-nowrap">{sup.name}</td>
                     <td className="py-5 px-6 text-white/70 text-sm leading-relaxed pr-8">{sup.whatIsItUsedFor}</td>
                     <td className="py-5 px-6">
-                      <span className="bg-[#4ade80]/20 text-[#4ade80] border border-[#4ade80]/30 px-3 py-1.5 text-xs rounded-full font-bold shadow-[0_0_10px_rgba(74,222,128,0.1)]">
+                      <span className="bg-white/10 text-white/90 border border-white/20 px-3 py-1.5 text-xs rounded-full font-bold shadow-sm">
                         {sup.evidenceLevel}
                       </span>
                     </td>
